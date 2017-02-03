@@ -4,14 +4,8 @@
 # This script configures my Node.js development setup. Note that
 # nvm is installed by the Homebrew install script.
 #
-# Also, I would highly reccomend not installing your Node.js build
-# tools, e.g., Grunt, gulp, WebPack, or whatever you use, globally.
-# Instead, install these as local devDepdencies on a project-by-project
-# basis. Most Node CLIs can be run locally by using the executable file in
-# "./node_modules/.bin". For example:
-#
-#     ./node_modules/.bin/webpack --config webpack.local.config.js
-#
+
+source ~/.nvm/nvm.sh
 
 if test ! $(which nvm)
 then
@@ -30,15 +24,19 @@ then
 	nvm alias default stable
 fi
 
+# Login in to npm
+npm whoami || npm login
+
 # All `npm install <pkg>` commands will pin to the version that was available at the time you run the command
 # npm config set save-exact = true
 
 # Use yarn
-
-
 # Globally install with npm
 # To list globally installed npm packages and version: npm list -g --depth=0
 npm install -g yarn
+
+# Does not work with yarn
+npm install -g azure-cli
 
 # Some descriptions:
 #
@@ -46,7 +44,6 @@ npm install -g yarn
 # git-recent — Type `git recent` to see your recent local git branches
 # git-open — Type `git open` to open the GitHub page or website for a repository
 packages=(
-    azure-cli
     babel-cli
 		diff-so-fancy
 		flow-bin
@@ -62,6 +59,8 @@ packages=(
 		webpack
 		yo
     node-gyp
+		tabtab
+    yarn-completions
 )
 
 yarn global add "${packages[@]}"
