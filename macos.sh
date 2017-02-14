@@ -85,15 +85,20 @@ defaults write com.apple.dock mineffect -string "scale"
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-# Top left screen corner → Put display to sleep
-defaults write com.apple.dock wvous-tl-corner -int 10
-defaults write com.apple.dock wvous-tl-modifier -int 0
-# Top right screen corner → Mission Control
-defaults write com.apple.dock wvous-tr-corner -int 2
-defaults write com.apple.dock wvous-tr-modifier -int 1
+
 # Bottom left screen corner → Start screen saver
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 2
+defaults write com.apple.Dock wvous-bl-corner 5
+defaults write com.apple.Dock wvous-bl-modifier 1048576
 # Bottom right screen corner → Start screen saver
-defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 3
+defaults write com.apple.Dock wvous-br-corner 4
+defaults write com.apple.Dock wvous-br-modifier 1048576
+# Top left screen corner → Put display to sleep
+defaults write com.apple.Dock wvous-tl-corner 10
+defaults write com.apple.Dock wvous-tl-modifier 1048576
+# Top right screen corner → Mission Control
+defaults write com.apple.Dock wvous-tr-corner 2
+defaults write com.apple.Dock wvous-tr-modifier 1048576
+
+# List out current settings
+# domain=com.apple.Dock; for key in wvous-{b,t}{l,r}-{corner,modifier}; do echo defaults write $domain $key $(defaults read $domain $key); done
+
