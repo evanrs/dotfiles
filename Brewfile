@@ -199,3 +199,5 @@ cask 'dropbox'
 
 # Other
 # mas 'Air Display', id: 419449718
+cask 'geekbench'
+cask 'licecap'
