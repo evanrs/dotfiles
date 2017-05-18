@@ -143,6 +143,7 @@ cask 'lighttable'
 cask 'macdown'
 cask 'sublime-text'
 cask 'visual-studio-code'
+cask 'nvalt'
 mas 'iA Writer Classic', id: 439623248
 mas 'OmmWriter', id: 412347921
 mas 'OmniFocus', id: 402835630
