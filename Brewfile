@@ -177,6 +177,7 @@ mas 'Mint QuickView', id: 533491939
 mas 'Timecop', id: 466285239
 
 # Media
+brew 'pngquant'
 brew 'imagemagick'
 brew 'ffmpeg'
 brew 'gifsicle'
