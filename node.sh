@@ -34,9 +34,7 @@ npm whoami || npm login
 # Globally install with npm
 # To list globally installed npm packages and version: npm list -g --depth=0
 npm install -g yarn
-
-# Does not work with yarn
-npm install -g azure-cli
+yarn config set prefix ~/.config/yarn/global
 
 # Some descriptions:
 #
@@ -44,20 +42,19 @@ npm install -g azure-cli
 # git-recent — Type `git recent` to see your recent local git branches
 # git-open — Type `git open` to open the GitHub page or website for a repository
 packages=(
+		azure-cli
     babel-cli
 		diff-so-fancy
 		flow-bin
 		flow-typed
 		git-open
 		git-recent
-		gulp
 		http-server
 		nodemon
 		npm-check
 		servedir
 		svgo
 		webpack
-		yo
     node-gyp
 		tabtab
     yarn-completions
