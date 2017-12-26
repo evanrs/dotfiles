@@ -22,6 +22,9 @@ then
 
 	# Use the stable version of node by default
 	nvm alias default stable
+
+	ln -fs ~/.nvm/current/bin/node /usr/local/bin/node
+	ln -fs ~/.nvm/current/bin/npm /usr/local/bin/npm
 fi
 
 # Login in to npm
