@@ -58,6 +58,7 @@ brew 'lua'
 brew 'python'
 brew 'python3'
 brew 'scala'
+cask 'dotnet'
 
 # Version management
 brew 'nvm'
