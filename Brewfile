@@ -59,6 +59,7 @@ brew 'python'
 brew 'python3'
 brew 'scala'
 cask 'dotnet'
+cask 'dotnet-sdk'
 
 # Version management
 brew 'nvm'
