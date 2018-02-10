@@ -65,24 +65,22 @@ cask 'dotnet-sdk'
 brew 'nvm'
 brew 'rbenv'
 
-# Databases
-brew 'datomic'
-# brew 'mongodb', restart_service: :changed
-brew 'mongodb32', restart_service: :changed
-brew 'neo4j', restart_service: :changed
-brew 'postgresql', restart_service: :changed
-brew 'rabbitmq', restart_service: :changed
+# Database and database adjacent …
+brew 'zookeeper'
 brew 'redis', restart_service: :changed
-brew 'rethinkdb', restart_service: :changed
+brew 'rabbitmq', restart_service: :changed
+brew 'kafka'
+brew 'datomic'
 brew 'sqlite'
+brew 'postgresql', restart_service: :changed
+brew 'mongodb', restart_service: :changed
+brew 'neo4j', restart_service: :changed
+brew 'rethinkdb', restart_service: :changed
 
 # Database tools
 brew 'pgcli'
 cask 'base'
 cask 'postico'
-
-# Daily
-cask 'flux'
 
 # Browsers
 cask 'chromium'
@@ -96,8 +94,11 @@ cask 'webkit-nightly'
 
 # Virtualization
 cask 'virtualbox'
+cask 'docker'
+cask 'docker-compose'
+cask 'docker-machine'
+caks 'vagrant'
 cask 'parallels-desktop'
-cask 'docker-toolbox'
 
 # Network
 brew 'httpie'
@@ -120,30 +121,31 @@ brew 'tree' # display directories as trees
 brew 'android-sdk'
 brew 'autoenv'
 brew 'carthage'
-# brew 'flow' # install locally or via npm
 brew 'hub' # a command-line wrapper for git that makes you better at GitHub
-brew 'hugo' # static site generator
 brew 'jq' # Lightweight and flexible command-line JSON processor
-brew 'phantomjs'
 brew 's3cmd'
 brew 'watchman'
-cask 'dash'
 cask 'exponent-xde'
 cask 'genymotion'
-cask 'heroku'
 cask 'iterm2'
 cask 'ngrok'
 cask 'reactotron'
 cask 'tower'
+cask 'hyper'
+
+# Deployment
+cask 'heroku'
+cask 'now'
 
 # Editors
+brew 'emacs'
 brew 'macvim'
 brew 'tmux'
 cask 'atom'
+cask 'sublime-text'
 cask 'caret'
 cask 'lighttable'
 cask 'macdown'
-cask 'sublime-text'
 cask 'visual-studio-code'
 cask 'nvalt'
 mas 'iA Writer Classic', id: 439623248
