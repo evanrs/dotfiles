@@ -45,22 +45,29 @@ yarn config set prefix ~/.config/yarn/global
 # git-recent — Type `git recent` to see your recent local git branches
 # git-open — Type `git open` to open the GitHub page or website for a repository
 packages=(
+		node-gyp
+		
 		azure-cli
-    babel-cli
-		diff-so-fancy
+
 		flow-bin
 		flow-typed
+	
 		git-open
 		git-recent
+		diff-so-fancy
+		
+		npm-check
+		
 		http-server
 		nodemon
-		npm-check
 		servedir
+		
+		json2csv
 		svgo
 		webpack
-    node-gyp
+
 		tabtab
-    yarn-completions
+		yarn-completions
 )
 
 yarn global add "${packages[@]}"
