@@ -14,7 +14,6 @@ brew 'mas'
 
 # Security
 mas '1Password', id: 443987910
-brew 'keybase'
 cask 'keybase'
 
 # Essential
@@ -30,40 +29,48 @@ brew 'rename'
 brew 'libevent'
 brew 'ponysay'
 brew 'fortune'
+
+# very essential
 cask 'spotify'
 
 # Version control
 brew 'git'
-brew 'git-extras' # https://github.com/tj/git-extras
+# brew 'git-extras' # https://github.com/tj/git-extras
 brew 'git-flow'
 brew 'git-lfs'
-brew 'git-subrepo'
 brew 'legit'
-brew 'mercurial'
+# brew 'git-subrepo'
+# brew 'mercurial'
 
-# Tools
+# Tools, … but are they not all tools?
 brew 'awscli'
 brew 'lynx'
 brew 'wrk'
 
 # Languages
 cask 'java'
-brew 'boot-clj'
 brew 'drip'
+brew 'scala'
+brew 'boot-clj'
+brew 'leiningen'
+
 brew 'elixir'
 brew 'erlang'
+
 brew 'go'
-brew 'leiningen'
+
 brew 'lua'
+
 brew 'python'
 brew 'python3'
-brew 'scala'
-cask 'dotnet'
-cask 'dotnet-sdk'
+
+# cask 'dotnet'
+# cask 'dotnet-sdk'
+
 
 # Version management
 brew 'nvm'
-brew 'rbenv'
+# brew 'rbenv'
 
 # Database and database adjacent …
 brew 'zookeeper'
@@ -83,22 +90,18 @@ cask 'base'
 cask 'postico'
 
 # Browsers
-cask 'chromium'
-cask 'firefox-aurora'
+cask 'firefox'
 cask 'firefoxdeveloperedition'
-cask 'firefoxnightly'
 cask 'google-chrome'
 cask 'google-chrome-canary'
+cask 'safari-technology-preview'
 cask 'torbrowser'
-cask 'webkit-nightly'
 
 # Virtualization
 cask 'virtualbox'
 cask 'docker'
-cask 'docker-compose'
-cask 'docker-machine'
-caks 'vagrant'
-cask 'parallels-desktop'
+cask 'vagrant'
+# cask 'parallels-desktop'
 
 # Network
 brew 'httpie'
@@ -110,27 +113,28 @@ cask 'charles'
 cask 'screens' # vnc client
 cask 'tunnelbear' # free tunnel
 
+
 # Terminal
-brew 'autojump' # a faster way to navigate your filesystem
-brew 'readline'
-brew 'source-highlight' # source-code syntax highlighter
+# brew 'autojump' # a faster way to navigate your filesystem
+# brew 'readline'
+# brew 'source-highlight' # source-code syntax highlighter
 brew 'thefuck' # corrects your previous console command
 brew 'tree' # display directories as trees
 
 # Development
-brew 'android-sdk'
-brew 'autoenv'
+# brew 'android-sdk'
+# brew 'autoenv'
 brew 'carthage'
 brew 'hub' # a command-line wrapper for git that makes you better at GitHub
 brew 'jq' # Lightweight and flexible command-line JSON processor
 brew 's3cmd'
 brew 'watchman'
-cask 'exponent-xde'
-cask 'genymotion'
+cask 'expo-xde'
+# cask 'genymotion'
 cask 'iterm2'
 cask 'ngrok'
-cask 'reactotron'
-cask 'tower'
+# cask 'reactotron'
+# cask 'tower'
 cask 'hyper'
 
 # Deployment
@@ -143,24 +147,24 @@ brew 'macvim'
 brew 'tmux'
 cask 'atom'
 cask 'sublime-text'
-cask 'caret'
-cask 'lighttable'
-cask 'macdown'
 cask 'visual-studio-code'
-cask 'nvalt'
-mas 'iA Writer Classic', id: 439623248
-mas 'OmmWriter', id: 412347921
-mas 'OmniFocus', id: 402835630
-mas 'Simplenote', id: 692867256
-mas 'WriteRoom', id: 417967324
+cask 'caret'
+# cask 'lighttable'
+cask 'macdown'
+# cask 'nvalt'
+# mas 'iA Writer Classic', id: 439623248
+# mas 'OmmWriter', id: 412347921
+# mas 'OmniFocus', id: 402835630
+# mas 'Simplenote', id: 692867256
+# mas 'WriteRoom', id: 417967324
 
 # Design
 # brew 'sfnt2woff-zopfli'
 # brew 'sfnt2woff'
 # brew 'woff2'
-cask 'sketch-toolbox'
 cask 'sketch'
-cask 'skyfonts'
+cask 'sketch-toolbox'
+# cask 'skyfonts'
 mas 'Pixelmator', id: 407963104
 
 # Utility
@@ -191,8 +195,8 @@ brew 'xvid'
 cask 'gifrocket'
 
 # Consumption
-cask 'jadengeller-helium' # floating web pane
-cask 'reeder' # rss reader
+# cask 'jadengeller-helium' # floating web pane
+# cask 'reeder' # rss reader
 cask 'vlc'
 mas 'Kindle', id: 405399194
 
@@ -201,9 +205,12 @@ brew 'weechat'
 cask 'discord'
 cask 'skype'
 cask 'slack'
-cask 'dropbox'
+# cask 'dropbox'
 
 # Other
 # mas 'Air Display', id: 419449718
 cask 'geekbench'
-cask 'licecap'
+# cask 'licecap'
+
+# Unfortunate occupational hazards 
+cask 'citrix-receiver'
