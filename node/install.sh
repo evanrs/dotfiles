@@ -46,25 +46,26 @@ yarn config set prefix ~/.config/yarn/global
 # git-open — Type `git open` to open the GitHub page or website for a repository
 packages=(
 		node-gyp
-		
-		azure-cli
+
+		npx
+
+		# azure-cli
 
 		flow-bin
 		flow-typed
-	
+
 		git-open
 		git-recent
 		diff-so-fancy
-		
+
 		npm-check
-		
+
 		http-server
 		nodemon
 		servedir
-		
+
 		json2csv
 		svgo
-		webpack
 
 		tabtab
 		yarn-completions
