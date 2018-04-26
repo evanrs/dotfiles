@@ -1,13 +1,9 @@
 cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
-tap 'caskroom/versions'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
-tap 'homebrew/dupes'
 tap 'homebrew/services'
-tap 'homebrew/versions'
-tap 'bramstein/webfonttools'
 
 # A simple command line interface for the Mac App Store
 brew 'mas'
@@ -70,7 +66,7 @@ brew 'python3'
 
 # Version management
 brew 'nvm'
-# brew 'rbenv'
+brew 'rbenv'
 
 # Database and database adjacent …
 brew 'zookeeper'
@@ -91,7 +87,6 @@ cask 'postico'
 
 # Browsers
 cask 'firefox'
-cask 'firefoxdeveloperedition'
 cask 'google-chrome'
 cask 'google-chrome-canary'
 cask 'safari-technology-preview'
@@ -138,7 +133,6 @@ cask 'ngrok'
 cask 'hyper'
 
 # Deployment
-cask 'heroku'
 cask 'now'
 
 # Editors
@@ -212,5 +206,5 @@ cask 'slack'
 cask 'geekbench'
 # cask 'licecap'
 
-# Unfortunate occupational hazards 
+# Unfortunate occupational hazards
 cask 'citrix-receiver'
