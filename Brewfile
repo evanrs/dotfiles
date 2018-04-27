@@ -166,16 +166,13 @@ brew 'aspell'
 cask 'kaleidoscope' # compare files
 
 # Others
-cask 'screenflow'
+# cask 'screenflow'
 # cask 'duet' # use your iphone as a screen, requires root
 mas 'Moom', id: 419330170
-mas 'Living Earth Desktop', id: 539362919
 mas 'The Unarchiver', id: 425424353
 
 # Personal management
-cask 'ynab' # money management
 mas 'Clear', id: 504544917
-mas 'Mint QuickView', id: 533491939
 mas 'Timecop', id: 466285239
 
 # Media
@@ -199,7 +196,6 @@ brew 'weechat'
 cask 'discord'
 cask 'skype'
 cask 'slack'
-# cask 'dropbox'
 
 # Other
 # mas 'Air Display', id: 419449718
