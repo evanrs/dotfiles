@@ -11,6 +11,48 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
+# Dock, Dashboard, and hot corners                                            #
+###############################################################################
+
+# Change minimize/maximize window effect
+# defaults write com.apple.dock mineffect -string "scale"
+
+# Hot corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+
+# Hide dock by default
+defaults write com.apple.dock autohide -bool true
+
+# Show only open applications
+defaults write com.apple.dock static-only -bool true
+
+# Bottom left screen corner → Start screen saver
+defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-modifier -int 1048576
+# Bottom right screen corner → Start screen saver
+defaults write com.apple.dock wvous-br-corner -int 3
+defaults write com.apple.dock wvous-br-modifier -int 1048576
+# Top left screen corner → Put display to sleep
+defaults write com.apple.dock wvous-tl-corner -int 10
+defaults write com.apple.dock wvous-tl-modifier -int 1048576
+# Top right screen corner → Mission Control
+defaults write com.apple.dock wvous-tr-corner -int 2
+defaults write com.apple.dock wvous-tr-modifier -int 1048576
+
+# List out current settings
+# domain=com.apple.dock; for key in wvous-{b,t}{l,r}-{corner,modifier}; do echo defaults write $domain $key -int $(defaults read $domain $key); done
+
+###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
@@ -37,7 +79,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 ###############################################################################
 # Screen                                                                      #
@@ -57,6 +99,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Finder                                                                      #
 ###############################################################################
 
+# Show the ~/Library folder.
+chflags nohidden ~/Library
+
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
@@ -73,42 +118,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Use AirDrop over every interface. srsly this should be a default.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
-
-###############################################################################
-# Dock, Dashboard, and hot corners                                            #
-###############################################################################
-
-# Change minimize/maximize window effect
-defaults write com.apple.dock mineffect -string "scale"
-
-# Hot corners
-# Possible values:
-#  0: no-op
-#  2: Mission Control
-#  3: Show application windows
-#  4: Desktop
-#  5: Start screen saver
-#  6: Disable screen saver
-#  7: Dashboard
-# 10: Put display to sleep
-# 11: Launchpad
-# 12: Notification Center
-
-# Bottom left screen corner → Start screen saver
-defaults write com.apple.Dock wvous-bl-corner 5
-defaults write com.apple.Dock wvous-bl-modifier 1048576
-# Bottom right screen corner → Start screen saver
-defaults write com.apple.Dock wvous-br-corner 4
-defaults write com.apple.Dock wvous-br-modifier 1048576
-# Top left screen corner → Put display to sleep
-defaults write com.apple.Dock wvous-tl-corner 10
-defaults write com.apple.Dock wvous-tl-modifier 1048576
-# Top right screen corner → Mission Control
-defaults write com.apple.Dock wvous-tr-corner 2
-defaults write com.apple.Dock wvous-tr-modifier 1048576
-
-# List out current settings
-# domain=com.apple.Dock; for key in wvous-{b,t}{l,r}-{corner,modifier}; do echo defaults write $domain $key $(defaults read $domain $key); done
 
 ###############################################################################
 # Safari                                                                      #
