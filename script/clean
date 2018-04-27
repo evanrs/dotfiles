@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Run all dotfiles cleaners.
+
+set -e
+
+cd "$(dirname $0)"/..
+
+# find cleaners and run them iteratively
+find . -name clean.sh | while read installer ; do sh -c "${installer}" ; done

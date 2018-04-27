@@ -53,3 +53,7 @@ brew update
 # Install software
 echo "› $ZSH/script/install"
 $ZSH/script/install
+
+# Clean up
+echo "› $ZSH/script/clean"
+$ZSH/script/clean
