@@ -1,0 +1,90 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // letter-spacing: -0.125rem;
+  // word-spacing: -.125em;
+  // font-family:  "Osaka";
+
+  // letter-spacing: -0.125em;
+  // word-spacing: -.25em;
+  // font-family:  "Office Code Pro"
+
+  font-family: 'Office Code Pro';
+  letter-spacing: -0.125rem;
+  letter-spacing: -0.09375rem;
+  letter-spacing: -.0625rem;
+  font-weight: 300;
+  // font-weight: 500;
+
+  // .indent-guide {
+  //     font-family: 'Osaka';
+  //     letter-spacing: normal;
+  // }
+
+  .autocomplete-plus {
+    letter-spacing: 0;
+  }
+  // font-size: 1.2rem;
+  // *::first-line {
+  //     font-family: 'Monofur for Powerline';
+  // }
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: red;
+  min-width: 2rem;
+  // border-width: .75rem;
+  // opacity: .5 !important;
+  transition: opacity cubic-bezier(0.37, 1, 0.1, 1) 1.6s;
+}
+
+atom-panel.modal.from-top {
+  &.overlay {
+    &,
+    .select-list ol {
+      // min-height: 80vh;
+    }
+  }
+}
+
+atom-text-editor .indent-guide,
+atom-text-editor .indent-guide {
+  color: rgba(0, 255, 214, 0.28);
+  color: rgba(0, 255, 214, 0.1);
+}
+
+.syntax--punctuation.syntax--definition.syntax--quasi {
+  color: rgba(0, 255, 214, 0.5);
+  &.syntax--end {
+    color: rgba(0, 255, 214, 1);
+  }
+}
+
+@media screen {
+  /* Leading rule */
+  html {
+    //   filter: invert(100%) hue-rotate(180deg) saturate(80%) contrast(105%) brightness(115%) !important;
+    //   filter: saturate(30%) brightness(100%) ;
+  }
+}
