@@ -74,7 +74,7 @@
           $1
       })}
     """
-  'mapProps to css':
+  'mapProps to css function':
     prefix: 'scmfn'
     body: """
       ${mapProps({
@@ -144,10 +144,6 @@
 
   'console.log(`name`, name)':
     prefix: 'log'
-    body: 'console.log(`$1`, $1)$2'
-
-  'console.log(`name`, name)':
-    prefix: 'logfor'
     body: 'console.log(`$1`, $1)$2'
 
   'console.log ||':
@@ -312,7 +308,7 @@
       }
     """
 
-  'New React Component':
+  'New React Component with PropTypes':
     prefix: 'nf-rcldp'
     body: """
       import React, { PureComponent } from 'react';
@@ -378,24 +374,6 @@
       };
     """
 
-  'New React Functional Component':
-    prefix: 'nf-rfn'
-    body: """
-      import React from 'react';
-      import PropTypes from 'prop-types';
-
-
-      export default function ${1}(${3:props}) {
-        return (
-          ${4:<div>MyComponent</div>}
-        );
-      }
-
-      ${1}.propTypes = {
-        ${2}
-      };
-    """
-
   'New React Functional Arrow Component export default':
     prefix: 'nf-rar'
     body: """
@@ -409,7 +387,7 @@
       export default ${1};
     """
 
-  'New React Functional Arrow Component export default':
+  'New React Functional Arrow Component export default with PropTypes':
     prefix: 'nf-rarp'
     body: """
       import React from 'react';
@@ -547,7 +525,7 @@
       });
     """
 
-  'React setState({ ... }) )':
+  'React setState({ ... }), callback)':
     prefix: 'sstcb'
     body: """
       this.setState({
@@ -557,7 +535,7 @@
       });
     """
 
-  'React setState(() => { ... }) )':
+  'React setState(() => { ... }))':
     prefix: 'sstfn'
     body: """
       this.setState((state, props) => {
@@ -567,7 +545,7 @@
       });
     """
 
-  'React setState(() => { ... }) )':
+  'React setState(() => { ... }), callback)':
     prefix: 'sstfncb'
     body: """
       this.setState((state, props) => {
