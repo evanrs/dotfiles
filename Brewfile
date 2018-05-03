@@ -60,7 +60,6 @@ brew 'python3'
 
 
 # Version management
-brew 'nvm'
 brew 'rbenv'
 
 
