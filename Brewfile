@@ -93,10 +93,11 @@ brew 'httpie'
 brew 'mtr' # traceroute and ping in a single tool
 brew 'wget'
 brew 'wifi-password' # get the current wifi-password
+brew 'wrk'
 cask 'charles'
 cask 'tunnelbear' # free tunnel
 cask 'ngrok'
-brew 'wrk'
+cask 'postman'
 
 
 # Terminal
