@@ -1,4 +1,5 @@
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# Load nvm from brew
+. "/usr/local/opt/nvm/nvm.sh"
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
