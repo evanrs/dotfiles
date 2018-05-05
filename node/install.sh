@@ -18,4 +18,4 @@ if [ "$(nvm version current)" == "none" ]; then
 	nvm alias default $NODE_VERSION
 fi
 
-nvm use --delete-prefix v10.0.0 --silent
+exp path
