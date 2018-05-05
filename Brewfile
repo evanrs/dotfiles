@@ -1,9 +1,8 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
-tap 'homebrew/services'
+tap 'caskroom/fonts'
 
 
 # A simple command line interface for the Mac App Store
@@ -125,6 +124,10 @@ brew 'tmux'
 cask 'atom'
 cask 'sublime-text'
 cask 'visual-studio-code'
+
+
+# Fonts
+cask 'font-fira-code'
 
 
 # Design
