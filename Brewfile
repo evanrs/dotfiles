@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'homebrew/core'
+tap 'homebrew/services'
 tap 'caskroom/fonts'
 
 
@@ -60,6 +61,7 @@ brew 'python3'
 
 # Version management
 brew 'rbenv'
+brew 'nvm'
 
 
 # Database and database adjacent …
@@ -72,19 +74,11 @@ brew 'mongodb', restart_service: :changed
 brew 'neo4j', restart_service: :changed
 brew 'rethinkdb', restart_service: :changed
 
-
 # Browsers
 cask 'firefox'
 cask 'google-chrome'
 cask 'google-chrome-canary'
 cask 'safari-technology-preview'
-
-
-# Virtualization
-cask 'virtualbox'
-cask 'docker'
-cask 'vagrant'
-
 
 # Network
 brew 'httpie'
@@ -97,12 +91,6 @@ cask 'tunnelbear' # free tunnel
 cask 'ngrok'
 cask 'postman'
 
-
-# Terminal
-brew 'thefuck' # corrects your previous console command
-brew 'tree' # display directories as trees
-
-
 # Development
 brew 'carthage'
 brew 'watchman'
@@ -110,11 +98,27 @@ cask 'iterm2'
 cask 'hyper'
 cask 'expo-xde'
 
+# Terminal
+brew 'thefuck' # corrects your previous console command
+brew 'tree' # display directories as trees
 
+# Orchestration
+# Virtualization
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'docker'
+cask 'vagrant'
+brew 'kubernetes'
+cask 'minikube'
+brew 'kubeless'
+brew 'helm'
+brew 'terraform'
+brew 'ansible'
 # Deployment
 cask 'now'
 brew 'awscli'
 brew 's3cmd'
+cask 'google-cloud-sdk'
 
 
 # Editors
