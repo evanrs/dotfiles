@@ -11,3 +11,8 @@ atom.symlink/recovery
 atom.symlink/local-history
 
 git/gitconfig.local.symlink
+
+nvm.symlink/versions
+nvm.symlink/aliases
+
+**/*cache
