@@ -11,9 +11,11 @@ diff-so-fancy
 
 npm-check
 
-http-server
-nodemon
-servedir
+browser-sync
+serve
+# http-server
+# nodemon
+# servedir
 
 json2csv
 svgo
