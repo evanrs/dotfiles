@@ -16,3 +16,5 @@ nvm.symlink/versions
 nvm.symlink/aliases
 
 **/*cache
+
+**/node_modules

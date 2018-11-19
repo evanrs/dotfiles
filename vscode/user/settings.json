@@ -1,0 +1,70 @@
+{
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 20,
+  "editor.fontWeight": "500",
+  "editor.letterSpacing": -1.32,
+  "editor.fontLigatures": true,
+  "editor.renderLineHighlight": "all",
+  "editor.tabSize": 2,
+  //
+  // gotta catch em all
+  //
+  "workbench.colorTheme": "Quiet Light",
+  "workbench.colorTheme": "Kary Pro Colors － Eye Light",
+  "workbench.colorTheme": "Kary Pro Colors － Light",
+  "workbench.colorTheme": "Gloom",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "Ramda",
+  // "workbench.colorTheme": "Atom One Light",
+  //
+  // keep windows open
+  //
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  //
+  // get rid of the extras
+  //
+  "workbench.activityBar.visible": false,
+  "workbench.editor.showTabs": false,
+  "editor.renderIndentGuides": false,
+  "scm.diffDecorationsGutterWidth": 1,
+  "editor.minimap.enabled": false,
+  "git.decorations.enabled": false,
+  "editor.glyphMargin": false,
+  "workbench.statusBar.visible": true,
+  "workbench.statusBar.feedback.visible": false,
+  "editor.lineDecorationsWidth": 0, // undocumented
+  "editor.lineNumbersMinChars": 3, // undocumented
+  // rest
+  "workbench.settings.editor": "json",
+  "workbench.commandPalette.history": 200,
+  "workbench.commandPalette.preserveInput": true,
+
+  "window.zoomLevel": -1,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "explorer.confirmDelete": false,
+  "prettier.trailingComma": "all",
+
+  // intellisense
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggest.localityBonus": true,
+  "editor.suggestFontSize": 12,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  // "editor.wordBasedSuggestions": false
+  "editor.snippetSuggestions": "top",
+  "editor.suggestOnTriggerCharacters": false,
+
+  // non-retina screens
+  "breadcrumbs.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "terminal.integrated.enableBell": false,
+  "prettier.eslintIntegration": false
+}

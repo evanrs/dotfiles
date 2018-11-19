@@ -9,4 +9,4 @@ echo "Linking ${ZROOTDIR:-$HOME}/.dotfiles/iterm2/profiles to ${ZROOTDIR:-$HOME}
 mkdir -p "${ZROOTDIR:-$HOME}/Library/Application Support/iTerm2/"
 rm -rf "${ZROOTDIR:-$HOME}/Library/Application Support/iTerm2/DynamicProfiles"
 
-# ln -sfF "${ZROOTDIR:-$HOME}/.dotfiles/iterm2/profiles" "${ZROOTDIR:-$HOME}/Library/Application\ Support/iTerm2/DynamicProfiles"
+# ln -sFn "${ZROOTDIR:-$HOME}/.dotfiles/iterm2/profiles" "${ZROOTDIR:-$HOME}/Library/Application\ Support/iTerm2/DynamicProfiles"

@@ -9,54 +9,29 @@
  * http://lesscss.org
  */
 
-/*
- * Examples
- * (To see them, uncomment and save)
- */
+.font__fira-code {
+  font-family: 'Fira Code', 'Menlo';
+  letter-spacing: initial;
+}
+.font__native {
+  font-family: 'Native', 'Office Code Pro', 'Menlo';
+  // letter-spacing: -0.0625rem;
+}
 
-// style the background color of the tree view
-.tree-view {
-  // background-color: whitesmoke;
+.font__office-code-pro {
+  font-family: 'Office Code Pro', 'Menlo';
+  letter-spacing: -0.0625rem;
+  font-weight: 300;
 }
 
 // style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
-  // letter-spacing: -0.125rem;
-  // word-spacing: -.125em;
-  // font-family:  "Osaka";
-
-  // letter-spacing: -0.125em;
-  // word-spacing: -.25em;
-  // font-family:  "Office Code Pro"
-
-  font-family: 'Office Code Pro', 'Menlo';
-  letter-spacing: -0.125rem;
-  letter-spacing: -0.09375rem;
-  letter-spacing: -.0625rem;
-  font-weight: 300;
-  // font-weight: 500;
-
-  // .indent-guide {
-  //     font-family: 'Osaka';
-  //     letter-spacing: normal;
-  // }
-
-  .autocomplete-plus {
-    letter-spacing: 0;
-  }
-  // font-size: 1.2rem;
-  // *::first-line {
-  //     font-family: 'Monofur for Powerline';
-  // }
+  text-rendering: optimizeLegibility;
 }
 
-// style UI elements inside atom-text-editor
-atom-text-editor .cursor {
-  // border-color: red;
-  min-width: 2rem;
-  // border-width: .75rem;
-  // opacity: .5 !important;
-  transition: opacity cubic-bezier(0.37, 1, 0.1, 1) 1.6s;
+atom-text-editor.editor .syntax--string.syntax--quoted,
+atom-text-editor.editor .syntax--string.syntax--regexp {
+  -webkit-font-feature-settings: 'liga' off, 'calt' off;
 }
 
 atom-panel.modal.from-top {
@@ -68,23 +43,35 @@ atom-panel.modal.from-top {
   }
 }
 
-atom-text-editor .indent-guide,
-atom-text-editor .indent-guide {
-  color: rgba(0, 255, 214, 0.28);
-  color: rgba(0, 255, 214, 0.1);
+/**
+ *
+ *
+ *
+ *
+ *                          IMDONE Board
+ */
+
+:root,
+html,
+body {
+  font-size: 10px;
 }
 
-.syntax--punctuation.syntax--definition.syntax--quasi {
-  color: rgba(0, 255, 214, 0.5);
-  &.syntax--end {
-    color: rgba(0, 255, 214, 1);
-  }
-}
-
-@media screen {
-  /* Leading rule */
-  html {
-    //   filter: invert(100%) hue-rotate(180deg) saturate(80%) contrast(105%) brightness(115%) !important;
-    //   filter: saturate(30%) brightness(100%) ;
+.imdone-atom {
+  .imdone-board-wrapper {
+    .imdone-board {
+      .list {
+        width: 24rem;
+        max-width: 24rem;
+        overflow: hidden;
+        .task {
+          width: 100%;
+        }
+        .task-line {
+          width: max-content;
+          max-width: 100%;
+        }
+      }
+    }
   }
 }

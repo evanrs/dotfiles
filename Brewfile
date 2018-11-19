@@ -156,6 +156,8 @@ mas 'Timecop', id: 466285239
 brew 'pngquant'
 brew 'imagemagick'
 brew 'ffmpeg'
+brew 'libvorbis'
+brew 'ffmpeg2theora'
 brew 'gifsicle'
 brew 'lame'
 brew 'x264'

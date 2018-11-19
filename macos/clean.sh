@@ -11,6 +11,8 @@ targets=(
 	oracle.java
 	skype
 	valvesoftware.steamclean
+	wasabiclient
+	zoom
 )
 
 # Paths to match targets from

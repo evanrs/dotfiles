@@ -42,13 +42,25 @@ setup_gitconfig () {
     read -e git_authorname
     user ' - What is your github author email?'
     read -e git_authoremail
+    user ' - What is your github handle?'
+    read -e github_handle
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example > git/gitconfig.local.symlink
+    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" -e "s/GITHUBHANDLE/$github_handle/g" git/gitconfig.local.symlink.example > git/gitconfig.local.symlink
 
     success 'gitconfig'
   fi
 }
 
+setup_github () {
+  user 'Clone your own topics?'
+  read -e clone_your_own
+
+  if echo "$clone_your_own" | grep "y"
+  then
+    user=`git config --get hub.user`
+    GITHUB_USER=$user hub clone $user/private ttteessst
+  fi
+}
 
 link_file () {
   local src=$1 dst=$2
@@ -138,6 +150,8 @@ install_dotfiles () {
 }
 
 setup_gitconfig
+setup_github
+exit 0;
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.

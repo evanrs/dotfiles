@@ -128,7 +128,7 @@
       """
 
 
-'.source.js':
+'.source.js, .source.ts, .source.ts.tsx, .source.tsx':
   'svg regex':
     prefix: 'svgoregex'
     body: """
@@ -405,10 +405,18 @@
       export default ${1};
     """
 
+  'React getDerivedStateFromProps':
+    prefix: 'gdsfp'
+    body: """
+      static getDerivedStateFromProps(nextProps, prevState) {
+        ${1}
+      }
+    """
+
   'React componentWillMount':
     prefix: 'cwm'
     body: """
-      componentWillMount() {
+      UNSAFE_componentWillMount() {
         ${1}
       }
     """
@@ -424,7 +432,7 @@
   'React componentWillReceiveProps':
     prefix: 'cwrp'
     body: """
-      componentWillReceiveProps(nextProps) {
+      UNSAFE_componentWillReceiveProps(nextProps) {
         ${1}
       }
     """
@@ -440,10 +448,20 @@
   'React componentWillUpdate':
     prefix: 'cwu'
     body: """
-      componentWillUpdate(nextProps, nextState) {
+      UNSAFE_componentWillUpdate(nextProps, nextState) {
         ${1}
       }
     """
+
+
+  'React getSnapshotBeforeUpdate':
+    prefix: 'gsbu'
+    body: """
+      getSnapshotBeforeUpdate(prevProps, prevState) {
+        ${1}
+      }
+    """
+
 
   'React componentDidUpdate':
     prefix: 'cdu'
@@ -457,6 +475,14 @@
     prefix: 'cwun'
     body: """
       componentWillUnmount() {
+        ${1}
+      }
+    """
+
+  'React componentDidCatch':
+    prefix: 'cdc'
+    body: """
+      componentDidCatch() {
         ${1}
       }
     """

@@ -28,6 +28,8 @@
     font: "ANSI Shadow"
   "atom-terminal":
     app: "iTerm.app"
+  "atom-typescript":
+    locale: "enz"
   "autocomplete-paths":
     extensions: [
       "js"
@@ -55,6 +57,18 @@
   "browser-plus": {}
   core:
     closeEmptyWindows: false
+    customFileTypes:
+      "source.ini": [
+        ".hgrc"
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     destroyEmptyPanes: false
     disabledPackages: [
       "Parinfer"
@@ -89,16 +103,33 @@
       "react-generatr"
       "pretty-json"
       "selection-mode"
-      "linter"
       "linter-ui-default"
       "autoclose-html"
-      "parinfer"
       "proto-repl"
       "proto-repl-charts"
       "ink"
       "terminal-plus"
+      "graphql-autocomplete"
+      "regex-railroad-diagram"
+      "template-generator"
+      "github"
+      "atom-ide-console"
+      "atom-ide-datatip"
+      "atom-ide-debugger"
+      "spell-check"
+      "parinfer"
+      "language-stylus"
+      "path-hyperclick"
+      "js-hyperclick"
+      "save-workspace"
+      "one-vibrancy"
+      "linter"
+      "image-view"
+      "atom-ide-ui"
+      "nuclide"
     ]
     ignoredNames: [
+      "node_modules"
       ".git"
       ".hg"
       ".svn"
@@ -107,30 +138,33 @@
       "Thumbs.db"
       "desktop.ini"
       ".happypack"
-      "build"
       ".cache"
-      "node_modules"
       "*yarn.lock"
       "*package-lock.json"
+      "__legend__"
     ]
     packagesWithKeymapsDisabled: [
       "navigate-indent"
       "atom-csscomb"
       "change-case"
       "escape-utils"
+      "imdone-atom"
+      "save-workspace"
     ]
     telemetryConsent: "no"
     themes: [
       "pristine-ui"
-      "gloom"
+      "ramda-syntax"
     ]
     titleBar: "custom"
   "css-comb":
     predef: "yandex"
     shouldUpdateOnSave: true
+  "dash-ui":
+    themeColor: "Indigo"
   editor:
-    fontFamily: "Office Code Pro"
-    fontSize: 10
+    fontFamily: "Fira Code"
+    fontSize: 13
     lineHeight: 1.38
     preferredLineLength: 110
     scrollSensitivity: 30
@@ -159,17 +193,16 @@
     brightness: "Light"
   "ide-flowtype":
     tryFlowBin: true
+  "imdone-atom":
+    showLoginOnLaunch: false
   "js-hyperclick":
     extensions: [
-      ".ts"
       ".js"
       ".json"
       ".node"
       ".css"
-      "ts"
-      "js"
-      "json"
-      "css"
+      ".ts"
+      ".tsx"
     ]
     usePendingPanes: true
   "language-babel":
@@ -193,6 +226,13 @@
     accessibility: {}
   "nord-atom-ui":
     tabSizing: false
+  "one-dark-ui":
+    fontSize: 10
+    hideDockButtons: true
+    stickyHeaders: true
+  "one-light-ui":
+    hideDockButtons: true
+    stickyHeaders: true
   parinfer:
     "file-extensions": [
       ".boot"
@@ -208,6 +248,7 @@
       ".rkt"
       ".scm"
     ]
+    "force-balance?": false
     "use-smart-mode?": true
   pigments:
     extendAutocompleteToColorValue: true
@@ -240,22 +281,19 @@
   "postcss-sorting": {}
   "prettier-atom":
     formatOnSaveOptions:
+      enabled: true
       respectEslintignore: true
       showInStatusBar: true
-    prettierEslintOptions:
-      prettierLast: true
+    prettierEslintOptions: {}
     prettierOptions:
-      printWidth: 110
-      semi: false
       singleQuote: true
-      tabWidth: 2
-      trailingComma: "es5"
-    useEslint: true
+      trailingComma: "all"
   "pristine-ui": {}
   "proto-repl":
     autoPrettyPrint: true
   react:
     enabledForAllJavascriptFiles: true
+  "save-workspace-Workspaces": {}
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -266,6 +304,8 @@
   "tab-foldername-index":
     numberOfFolders: 2
   "tab-title": {}
+  tabs:
+    enableVcsColoring: true
   "template-generator": {}
   "terminal-plus":
     core:
@@ -275,10 +315,17 @@
     visible: false
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
-    squashDirectoryNames: true
   welcome:
     showOnStartup: false
+  "z-js-hyperclick":
+    extensions: [
+      ".js"
+      ".json"
+      ".ts"
+      ".tsx"
+      ".css"
+      ".node"
+    ]
 ".editorconfig.source":
   editor:
     showIndentGuide: true
