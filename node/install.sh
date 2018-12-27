@@ -17,5 +17,3 @@ if [ "$(nvm version current)" == "none" ]; then
 	nvm install $NODE_VERSION --latest-npm
 	nvm alias default $NODE_VERSION
 fi
-
-exp path
