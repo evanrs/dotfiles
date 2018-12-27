@@ -149,9 +149,9 @@ install_dotfiles () {
   done
 }
 
-setup_gitconfig
-setup_github
-exit 0;
+# setup_gitconfig
+# setup_github
+# exit 0;
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.
