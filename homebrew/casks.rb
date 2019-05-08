@@ -55,6 +55,7 @@ cask 'postman'
 cask 'iterm2'
 cask 'hyper'
 cask 'expo-xde'
+cask 'sequel-pro'
 
 # Virtualization
 cask 'virtualbox'

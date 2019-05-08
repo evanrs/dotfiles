@@ -48,6 +48,11 @@ brew 'mongodb', restart_service: :changed
 brew 'neo4j', restart_service: :changed
 brew 'rethinkdb', restart_service: :changed
 
+# CLIs
+
+tap 'prisma/prisma'
+brew 'prisma'
+
 # Browsers
 
 # Network
