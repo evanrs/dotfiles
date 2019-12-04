@@ -1,0 +1,22 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "shift+cmd+j",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "workbench.action.findInFiles",
+    "when": "!searchViewletVisible"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.togglePanel"
+  }
+]

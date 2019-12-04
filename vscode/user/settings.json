@@ -1,31 +1,21 @@
 {
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "Native Mono, Fira Code, Menlo, monospace",
   "editor.fontSize": 16,
   "editor.lineHeight": 20,
-  "editor.fontWeight": "500",
   "editor.letterSpacing": -1.32,
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "all",
   "editor.tabSize": 2,
-  //
-  // gotta catch em all
-  //
-  "workbench.colorTheme": "Quiet Light",
-  "workbench.colorTheme": "Kary Pro Colors － Eye Light",
-  "workbench.colorTheme": "Kary Pro Colors － Light",
   "workbench.colorTheme": "Gloom",
-  "workbench.colorTheme": "Atom One Dark",
-  "workbench.colorTheme": "Ramda",
-  // "workbench.colorTheme": "Atom One Light",
-  //
   // keep windows open
-  //
   "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.restoreViewState": true,
+  "search.useReplacePreview": true,
   //
   // get rid of the extras
   //
   "workbench.activityBar.visible": false,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": true,
   "editor.renderIndentGuides": false,
   "scm.diffDecorationsGutterWidth": 1,
   "editor.minimap.enabled": false,
@@ -34,21 +24,14 @@
   "workbench.statusBar.visible": true,
   "workbench.statusBar.feedback.visible": false,
   "editor.lineDecorationsWidth": 0, // undocumented
-  "editor.lineNumbersMinChars": 3, // undocumented
-  // rest
-  "workbench.settings.editor": "json",
+  "editor.lineNumbersMinChars": 2, // undocumented
   "workbench.commandPalette.history": 200,
   "workbench.commandPalette.preserveInput": true,
-
-  "window.zoomLevel": -1,
-  "editor.formatOnSave": true,
+  "window.zoomLevel": 0,
   "editor.formatOnPaste": false,
   "atomKeymap.promptV3Features": true,
-  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.multiCursorModifier": "alt",
   "explorer.confirmDelete": false,
-  "prettier.trailingComma": "all",
-
-  // intellisense
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
@@ -57,14 +40,131 @@
   "editor.suggest.localityBonus": true,
   "editor.suggestFontSize": 12,
   "editor.suggestSelection": "recentlyUsedByPrefix",
-  // "editor.wordBasedSuggestions": false
-  "editor.snippetSuggestions": "top",
   "editor.suggestOnTriggerCharacters": false,
-
-  // non-retina screens
   "breadcrumbs.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-
   "terminal.integrated.enableBell": false,
-  "prettier.eslintIntegration": false
+  // "prettier.eslintIntegration": false,
+  "workbench.settings.openDefaultSettings": false,
+  "workbench.sideBar.location": "right",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.wrappingIndent": "deepIndent",
+  "peacock.affectActivityBar": true,
+  "peacock.affectStatusBar": true,
+  // search
+  "search.exclude": {
+    "**/build": true,
+    "**/lib": true
+  },
+  // "search.location": "panel",
+  "search.smartCase": true,
+  "search.useGlobalIgnoreFiles": true,
+  "search.usePCRE2": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.swipeToNavigate": true,
+  // creating files
+  "advancedNewFile.convenienceOptions": [
+    "current",
+    "last",
+    "root"
+  ],
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#b52e31"
+    },
+    {
+      "name": "Auth0 Orange",
+      "value": "#eb5424"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "C# Purple",
+      "value": "#68217A"
+    },
+    {
+      "name": "Gatsby Purple",
+      "value": "#639"
+    },
+    {
+      "name": "Go Cyan",
+      "value": "#5dc9e2"
+    },
+    {
+      "name": "Java Blue-Gray",
+      "value": "#557c9b"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#00b3e6"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    },
+    {
+      "name": "Prisma Violet",
+      "value": "rgb(159, 107, 244)"
+    },
+    {
+      "name": "Glom Glam Violet",
+      "value": "#AE81FF"
+    },
+    {
+      "name": "Glom Glam Red",
+      "value": "#F92672"
+    },
+    {
+      "name": "Gloom Glam Pink",
+      "value": "#F5AAFD"
+    }
+  ],
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "window.restoreWindows": "all",
+  "window.title": "${rootName}${separator}${activeEditorShort}",
+  "window.newWindowDimensions": "inherit",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "flow.logLevel": "error",
+  "debug.internalConsoleOptions": "neverOpen",
+  "comments.openPanel": "neverOpen",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.jenkinsfile": "groovy"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true
 }

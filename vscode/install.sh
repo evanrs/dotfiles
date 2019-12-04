@@ -11,3 +11,4 @@ mkdir -p "$target"
 for path in snippets workspaceStorage settings.json keybindings.json; do
   ln -snFv "$source/$path" "$target/$path"
 done
+
