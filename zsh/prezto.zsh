@@ -6,6 +6,8 @@ source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
 ## (∩ ͡° ͜ʖ ͡°)⊃━☆ﾟ. *
 ##
 
+tabs -2
+
 autoload -Uz promptinit
 promptinit
 prompt pure
