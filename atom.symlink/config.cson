@@ -157,14 +157,16 @@
       "ramda-syntax"
     ]
     titleBar: "custom"
+    uriHandlerRegistration: "always"
   "css-comb":
     predef: "yandex"
     shouldUpdateOnSave: true
   "dash-ui":
     themeColor: "Indigo"
+  diagrams:
+    previewWidth: 1657
   editor:
     fontFamily: "Fira Code"
-    fontSize: 13
     lineHeight: 1.38
     preferredLineLength: 110
     scrollSensitivity: 30
