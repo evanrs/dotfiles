@@ -1,0 +1,32 @@
+#!/bin/sh
+# Check if this is the initial commit
+# echo "whaaaaaa"
+# if git rev-parse --verify HEAD >/dev/null 2>&1
+# then
+# echo "pre-commit: About to create a new commit..."
+# against=HEAD
+# else
+# echo "pre-commit: About to create the first commit..."
+# fi
+# # Use git diff-index to check for whitespace errors
+# echo "pre-commit: Testing for whitespace errors..."
+# if ! git diff-index --check --cached $against
+# then
+# echo "pre-commit: Aborting commit due to whitespace errors"
+# exit 1
+# else
+# echo "pre-commit: No whitespace errors :)"
+# exit 0
+# fi
+
+# export GIT_AUTHOR_DATE=$(date -v -130d -v -6H)
+# export GIT_COMMITTER_DATE=$(date -v -130d -v -6H)
+
+# playdate=$(
+# 	git log --date "format:%F %T" --name-status HEAD^..HEAD | grep Date | awk '{$1="";print$0}' | tr -d '\n' | xargs -0 date -jf " %F %T" -v +`random`M -v +`random`S
+# )
+
+# export GIT_AUTHOR_DATE=$playdate
+# export GIT_COMMITTER_DATE=$playdate
+
+# echo "Set commit date to $playdate"

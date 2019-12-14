@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# bootstrap installs things.
+
+user () {
+  printf "\r  [ \033[0;33m??\033[0m ] $1\n"
+}
+
+function dothing() {
+  user ' - What is your github author name?'
+  read -e git_authorname
+}
+
+dothing
+echo $git_authorname
