@@ -18,3 +18,5 @@ nvm.symlink/aliases
 **/*cache
 
 **/node_modules
+
+vscode/user/workspaceStorage
