@@ -54,8 +54,8 @@ cask 'postman'
 # Development
 cask 'iterm2'
 cask 'hyper'
-cask 'expo-xde'
 cask 'sequel-pro'
+cask 'android-studio'
 
 # Virtualization
 cask 'virtualbox'
