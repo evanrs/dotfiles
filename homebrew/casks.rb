@@ -1,6 +1,6 @@
 # cask_args appdir: '/Applications'
 
-tap 'caskroom/fonts'
+tap 'homebrew/cask-fonts'
 
 # Fonts
 cask 'font-fira-sans'
