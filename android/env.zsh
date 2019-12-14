@@ -1,0 +1,1 @@
+ANDROID_SDK="~/Library/Android/sdk"
