@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
 # Set node env
-NODE_VERSION=v10.0.0
+NODE_VERSION=v13.3.0
 
 export NVM_DIR="$HOME/.nvm"
 if ! [ -e "$NVM_DIR" ]; then
 	mkdir "$NVM_DIR"
 fi
+
+ln -sfv ./default-packages $NVM_DIR
 
 # Load nvm from brew
 . "/usr/local/opt/nvm/nvm.sh"
