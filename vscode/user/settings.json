@@ -6,7 +6,7 @@
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "all",
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Gloom",
+  "workbench.colorTheme": "Super Contrast (rainglow)",
   // keep windows open
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.restoreViewState": true,
@@ -54,6 +54,7 @@
   // search
   "search.exclude": {
     "**/build": true,
+    "**/dist": true,
     "**/lib": true
   },
   // "search.location": "panel",
@@ -166,5 +167,16 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/dist": true,
+    // "**/lib": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "workbench.startupEditor": "none"
 }
