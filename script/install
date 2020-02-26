@@ -6,11 +6,16 @@ set -e
 
 cd "$(dirname $0)"/..
 
-# Run Homebrew through the Brewfile
 echo "› brew bundle"
 brew bundle --file=./Brewfile
-brew bundle --file=./homebrew/casks.rb
-# brew bundle --file=./homebrew/mas.rb
 
-# find the installers and run them iteratively
+# Find the installers and run them iteratively
+echo "> script/install"
 find . -name install.sh | while read installer ; do echo $installer; sh -c "${installer}" ; done
+
+# Run Homebrew through the Brewfile
+echo "› brew bundle casks"
+brew bundle --file=./homebrew/casks.rb
+
+echo "› brew bundle mas"
+brew bundle --file=./homebrew/mas.rb
