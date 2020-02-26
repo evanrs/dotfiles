@@ -29,3 +29,5 @@
         default = simple
 [http]
 	cookiefile = /Users/evan/.gitcookies
+[diff]
+	noprefix = true
