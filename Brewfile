@@ -2,6 +2,9 @@ tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
 
+tap 'stackery/tap'
+brew install stackery-cli
+
 # Essential
 brew 'zsh'
 
@@ -37,6 +40,10 @@ brew 'python3'
 # Version management
 brew 'rbenv'
 brew 'nvm'
+brew 'asdf'
+
+# Environment
+brew 'direnv'
 
 # Database and database adjacent …
 brew 'redis', restart_service: :changed
@@ -49,7 +56,6 @@ brew 'neo4j', restart_service: :changed
 brew 'rethinkdb', restart_service: :changed
 
 # CLIs
-
 tap 'prisma/prisma'
 brew 'prisma'
 
@@ -80,7 +86,6 @@ brew 'ansible'
 # Deployment
 brew 'awscli'
 brew 's3cmd'
-
 
 # Editors
 brew 'emacs'
