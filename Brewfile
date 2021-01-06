@@ -52,8 +52,6 @@ brew 'python'
 brew 'python3'
 
 # Version management
-brew 'rbenv'
-brew 'nvm'
 brew 'asdf'
 
 # Environment
