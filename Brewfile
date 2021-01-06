@@ -2,9 +2,6 @@ tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
 
-tap 'stackery/tap'
-brew install stackery-cli
-
 # Essential
 brew 'zsh'
 
@@ -20,9 +17,26 @@ brew 'gnu-sed', args: ['--with-default-names']
 brew 'rename'
 brew 'libevent'
 
+# ASDF dependencies
+
+brew 'coreutils'
+brew 'automake'
+brew 'autoconf'
+brew 'openssl'
+brew 'libyaml'
+# brew 'readline'
+# brew 'libxslt'
+brew 'libtool'
+brew 'unixodbc'
+# brew 'unzip'
+# brew 'curl'
+brew 'gnupg' # verifies authenticity of plugin
+
 # Version control
+brew 'asdf'
 brew 'git'
 brew 'git-lfs'
+brew 'git-delta'
 brew 'hub' # github cli
 
 # Languages
@@ -84,8 +98,12 @@ brew 'terraform'
 brew 'ansible'
 
 # Deployment
+tap 'aws/tap'
 brew 'awscli'
 brew 's3cmd'
+brew 'aws-sam-cli'
+tap 'stackery/tap'
+brew 'stackery-cli'
 
 # Editors
 brew 'emacs'
