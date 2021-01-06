@@ -13,3 +13,4 @@ promptinit
 prompt pure
 
 eval $(thefuck --alias)
+git-info on
