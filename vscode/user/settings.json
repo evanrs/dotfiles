@@ -1,12 +1,16 @@
 {
-  "editor.fontFamily": "Native Mono, Fira Code, Menlo, monospace",
+  "editor.fontFamily": "Native, Fira Code, Menlo, monospace",
+  "editor.fontSize": 18,
+  "editor.letterSpacing": -1.62,
+  "editor.fontFamily": "FiraCode-Retina, Fira Code, Menlo, monospace",
   "editor.fontSize": 16,
-  "editor.lineHeight": 20,
-  "editor.letterSpacing": -1.32,
+  "editor.letterSpacing": -1.02,
+  // "editor.letterSpacing": -1.22,
+  "editor.lineHeight": 24,
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "all",
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Super Contrast (rainglow)",
+  "workbench.colorTheme": "Palenight Operator",
   // keep windows open
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.restoreViewState": true,
@@ -27,7 +31,7 @@
   "editor.lineNumbersMinChars": 2, // undocumented
   "workbench.commandPalette.history": 200,
   "workbench.commandPalette.preserveInput": true,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -2,
   "editor.formatOnPaste": false,
   "atomKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "alt",
@@ -70,6 +74,22 @@
     "root"
   ],
   "peacock.favoriteColors": [
+    {
+      "name": "flex-peach",
+      "value": "#FDEEE6",
+    },
+    {
+      "name": "flex-orange",
+      "value": "#E09A48",
+    },
+    {
+      "name": "flex-seafoam",
+      "value": "#BACFDA",
+    },
+    {
+      "name": "flex-teal",
+      "value": "#347881",
+    },
     {
       "name": "Angular Red",
       "value": "#b52e31"
@@ -167,7 +187,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
   "files.exclude": {
     "**/dist": true,
     // "**/lib": true
@@ -178,5 +197,12 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "files.insertFinalNewline": true,
+  "[java]": {
+    "editor.formatOnSave": false
+  },
+  "git.autofetch": true,
+  "editor.formatOnSave": true,
+  "extensions.ignoreRecommendations": false
 }
