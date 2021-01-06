@@ -29,11 +29,18 @@ cask 'font-ubuntu-mono-derivative-powerline'
 cask 'font-liberation-sans'
 cask 'font-liberation-mono-for-powerline'
 
+cask 'font-cascadia'
+cask 'font-cascadia-mono'
+cask 'font-cascadia-mono-pl'
+cask 'font-cascadia-pl'
+
+# Audio
+cask 'blackhole'
 
 # Security
 cask 'keybase'
 
-# very essential
+# Very Super Essential
 cask 'spotify'
 
 # Languages
