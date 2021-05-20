@@ -23,5 +23,62 @@
     "key": "shift+cmd+r",
     "command": "editor.action.rename",
     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+;",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "shift+cmd+left",
+    "command": "workbench.action.positionPanelLeft"
+  },
+  {
+    "key": "shift+cmd+right",
+    "command": "workbench.action.positionPanelRight"
+  },
+  {
+    "key": "shift+cmd+down",
+    "command": "workbench.action.positionPanelBottom"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "-jsonnet.previewToSide",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  {
+    "key": "cmd+'",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "cmd+;",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+cmd+\\",
+    "command": "workbench.action.toggleSidebarPosition"
   }
 ]

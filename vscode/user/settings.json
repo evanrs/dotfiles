@@ -19,7 +19,6 @@
   // get rid of the extras
   //
   "workbench.activityBar.visible": false,
-  "workbench.editor.showTabs": true,
   "editor.renderIndentGuides": false,
   "scm.diffDecorationsGutterWidth": 1,
   "editor.minimap.enabled": false,
@@ -31,10 +30,9 @@
   "editor.lineNumbersMinChars": 2, // undocumented
   "workbench.commandPalette.history": 200,
   "workbench.commandPalette.preserveInput": true,
-  "window.zoomLevel": -2,
   "editor.formatOnPaste": false,
   "atomKeymap.promptV3Features": true,
-  "editor.multiCursorModifier": "alt",
+  "editor.multiCursorModifier": "ctrlCmd",
   "explorer.confirmDelete": false,
   "editor.quickSuggestions": {
     "other": true,
@@ -50,7 +48,6 @@
   "terminal.integrated.enableBell": false,
   // "prettier.eslintIntegration": false,
   "workbench.settings.openDefaultSettings": false,
-  "workbench.sideBar.location": "right",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.wrappingIndent": "deepIndent",
   "peacock.affectActivityBar": true,
@@ -204,5 +201,11 @@
   },
   "git.autofetch": true,
   "editor.formatOnSave": true,
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.allowWorkspaceConfiguration": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorWidth": 3,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabCloseButton": "off"
 }
