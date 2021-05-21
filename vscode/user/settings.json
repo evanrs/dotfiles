@@ -10,7 +10,7 @@
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "all",
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Palenight Operator",
+  "workbench.colorTheme": "Monzo (rainglow)",
   // keep windows open
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.restoreViewState": true,
@@ -32,7 +32,6 @@
   "workbench.commandPalette.preserveInput": true,
   "editor.formatOnPaste": false,
   "atomKeymap.promptV3Features": true,
-  "editor.multiCursorModifier": "ctrlCmd",
   "explorer.confirmDelete": false,
   "editor.quickSuggestions": {
     "other": true,
@@ -202,10 +201,26 @@
   "git.autofetch": true,
   "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": false,
-  "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.allowWorkspaceConfiguration": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorWidth": 3,
   "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.tabCloseButton": "off"
+  "workbench.editor.tabCloseButton": "off",
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.action.switchWindow",
+    "workbench.action.terminal.resizePaneLeft",
+    "workbench.action.terminal.resizePaneRight",
+    "workbench.action.terminal.resizePaneUp",
+    "workbench.action.terminal.resizePaneDown"
+  ],
+  "terminal.integrated.tabs.location": "left",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

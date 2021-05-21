@@ -34,15 +34,18 @@
   },
   {
     "key": "shift+cmd+left",
-    "command": "workbench.action.positionPanelLeft"
+    "command": "workbench.action.positionPanelLeft",
+    "when": "!editorTextFocus"
   },
   {
     "key": "shift+cmd+right",
-    "command": "workbench.action.positionPanelRight"
+    "command": "workbench.action.positionPanelRight",
+    "when": "!editorTextFocus"
   },
   {
     "key": "shift+cmd+down",
-    "command": "workbench.action.positionPanelBottom"
+    "command": "workbench.action.positionPanelBottom",
+    "when": "!editorTextFocus"
   },
   {
     "key": "shift+cmd+i",
@@ -80,5 +83,19 @@
   {
     "key": "ctrl+cmd+\\",
     "command": "workbench.action.toggleSidebarPosition"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+w",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "shift+cmd+'",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   }
 ]
