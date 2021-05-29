@@ -35,17 +35,17 @@
   {
     "key": "shift+cmd+left",
     "command": "workbench.action.positionPanelLeft",
-    "when": "!editorTextFocus"
+    "when": "!editorFocused && !editorTextFocused && !textInputFocus && !textFocus && !listFocus"
   },
   {
     "key": "shift+cmd+right",
     "command": "workbench.action.positionPanelRight",
-    "when": "!editorTextFocus"
+    "when": "!editorFocused && !editorTextFocused && !listFocus && !textFocus && !textInputFocus"
   },
   {
     "key": "shift+cmd+down",
     "command": "workbench.action.positionPanelBottom",
-    "when": "!editorTextFocus"
+    "when": "!editorFocused && !editorTextFocused && !listFocus && !textFocus && !textInputFocus"
   },
   {
     "key": "shift+cmd+i",

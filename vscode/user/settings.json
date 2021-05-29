@@ -10,7 +10,7 @@
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "all",
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Monzo (rainglow)",
+  "workbench.colorTheme": "Loyal Light (rainglow)",
   // keep windows open
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.restoreViewState": true,
@@ -222,5 +222,10 @@
   ],
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.sideBar.location": "right",
+  "window.zoomLevel": 1
 }
