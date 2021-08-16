@@ -6,6 +6,9 @@ set -e
 
 cd "$(dirname $0)"/..
 
+echo "> script/pre-install"
+find . -name pre-install.sh | while read installer ; do echo $installer; sh -c "${installer}" ; done
+
 echo "› brew bundle"
 brew bundle --file=./Brewfile
 
@@ -19,3 +22,6 @@ brew bundle --file=./homebrew/casks.rb
 
 echo "› brew bundle mas"
 brew bundle --file=./homebrew/mas.rb
+
+echo "> script/post-install"
+find . -name post-install.sh | while read installer ; do echo $installer; sh -c "${installer}" ; done
