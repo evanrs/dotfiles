@@ -50,3 +50,5 @@
 #     file-decoration-style = none
 [merge]
 	ff = only
+[init]
+	defaultBranch = main
