@@ -1,0 +1,15 @@
+{
+  "name": "zxs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evan Schneider <me@evanrs.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "commander": "8.1.0",
+    "find-up": "5.0.0"
+  }
+}
