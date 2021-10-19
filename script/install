@@ -6,22 +6,18 @@ set -e
 
 cd "$(dirname $0)"/..
 
-echo "> script/pre-install"
-find . -name pre-install.sh | while read installer ; do echo $installer; sh -c "${installer}" ; done
+# collect start up details
+echo "> **/prepare.sh"
+find . -name prepare.sh | while read installer ; do printf "\n$installer\n"; source "${installer}" ; done; printf "\n\n"
 
-echo "› brew bundle"
-brew bundle --file=./Brewfile
+# set up root dependencies
+echo "> **/pre-install.sh"
+find . -name pre-install.sh | while read installer ; do printf "\n$installer\n"; sh -c "${installer}" ; done; printf "\n\n"
 
-# Find the installers and run them iteratively
-echo "> script/install"
-find . -name install.sh | while read installer ; do echo $installer; sh -c "${installer}" ; done
+# install preferred software
+echo "> **/install.sh"
+find . -name install.sh | while read installer ; do printf "\n$installer\n"; sh -c "${installer}" ; done; printf "\n\n"
 
-# Run Homebrew through the Brewfile
-echo "› brew bundle casks"
-brew bundle --file=./homebrew/casks.rb
-
-echo "› brew bundle mas"
-brew bundle --file=./homebrew/mas.rb
-
-echo "> script/post-install"
-find . -name post-install.sh | while read installer ; do echo $installer; sh -c "${installer}" ; done
+# clean up and apply any final glue or finsih
+echo "> **/post-install.sh"
+find . -name post-install.sh | while read installer ; do printf "\n$installer\n"; sh -c "${installer}" ; done; printf "\n\n"
