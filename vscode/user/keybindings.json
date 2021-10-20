@@ -33,19 +33,16 @@
     "command": "-workbench.action.togglePanel"
   },
   {
-    "key": "shift+cmd+left",
-    "command": "workbench.action.positionPanelLeft",
-    "when": "!editorFocused && !editorTextFocused && !textInputFocus && !textFocus && !listFocus"
+    "key": "cmd+/ shift+left",
+    "command": "workbench.action.positionPanelLeft"
   },
   {
-    "key": "shift+cmd+right",
-    "command": "workbench.action.positionPanelRight",
-    "when": "!editorFocused && !editorTextFocused && !listFocus && !textFocus && !textInputFocus"
+    "key": "cmd+/ shift+right",
+    "command": "workbench.action.positionPanelRight"
   },
   {
-    "key": "shift+cmd+down",
-    "command": "workbench.action.positionPanelBottom",
-    "when": "!editorFocused && !editorTextFocused && !listFocus && !textFocus && !textInputFocus"
+    "key": "cmd+/ shift+down",
+    "command": "workbench.action.positionPanelBottom"
   },
   {
     "key": "shift+cmd+i",
@@ -97,5 +94,109 @@
     "key": "f12",
     "command": "-editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+k shift+cmd+p",
+    "command": "peacock.changeColorToRandom"
+  },
+  {
+    "key": "cmd+n",
+    "command": "extension.simpleNewFile"
+  },
+  {
+    "key": "alt+cmd+n",
+    "command": "-extension.simpleNewFile"
+  },
+  {
+    "key": "alt+cmd+n",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "cmd+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+alt+cmd+n",
+    "command": "fileutils.newFile"
+  },
+  {
+    "key": "cmd+/ shift+p",
+    "command": "workbench.action.terminal.moveToTerminalPanel"
+  },
+  {
+    "key": "cmd+/ cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-workbench.action.terminal.clear",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+/ cmd+;",
+    "command": "workbench.action.openWorkspaceSettings"
+  },
+  {
+    "key": "cmd+/ ctrl+;",
+    "command": "workbench.action.openWorkspaceSettingsFile"
+  },
+  {
+    "key": "shift+alt+left",
+    "command": "workbench.action.terminal.resizePaneLeft",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+left",
+    "command": "-workbench.action.terminal.resizePaneLeft",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+down",
+    "command": "-workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "workbench.action.terminal.resizePaneRight",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "-workbench.action.terminal.resizePaneRight",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+up",
+    "command": "-workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+/ cmd+/",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.action.tasks.build"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.view.extension.bookmarks"
   }
 ]

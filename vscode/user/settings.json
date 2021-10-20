@@ -1,16 +1,17 @@
 {
-  "editor.fontFamily": "Native, Fira Code, Menlo, monospace",
-  "editor.fontSize": 18,
-  "editor.letterSpacing": -1.62,
-  "editor.fontFamily": "FiraCode-Retina, Fira Code, Menlo, monospace",
-  "editor.fontSize": 16,
-  "editor.letterSpacing": -1.02,
+  // "editor.fontSize": 18,
+  // "editor.letterSpacing": -1.62,
+  // "editor.fontSize": 16,
+  // "editor.letterSpacing": -1.02,
   // "editor.letterSpacing": -1.22,
-  "editor.lineHeight": 24,
-  "editor.fontLigatures": true,
+  // "editor.lineHeight": 24,
+  // "editor.fontLigatures": true,
   "editor.renderLineHighlight": "all",
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Loyal Light (rainglow)",
+  // "oneDarkPro.editorTheme": "panda",
+  // "oneDarkPro.vivid": true,
+  // "oneDarkPro.bold": true,
+  // "oneDarkPro.italic": true,
   // keep windows open
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.restoreViewState": true,
@@ -28,7 +29,7 @@
   "workbench.statusBar.feedback.visible": false,
   "editor.lineDecorationsWidth": 0, // undocumented
   "editor.lineNumbersMinChars": 2, // undocumented
-  "workbench.commandPalette.history": 200,
+  "workbench.commandPalette.history": 1000,
   "workbench.commandPalette.preserveInput": true,
   "editor.formatOnPaste": false,
   "atomKeymap.promptV3Features": true,
@@ -64,27 +65,23 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.swipeToNavigate": true,
   // creating files
-  "advancedNewFile.convenienceOptions": [
-    "current",
-    "last",
-    "root"
-  ],
+  "advancedNewFile.convenienceOptions": ["current", "last", "root"],
   "peacock.favoriteColors": [
     {
       "name": "flex-peach",
-      "value": "#FDEEE6",
+      "value": "#FDEEE6"
     },
     {
       "name": "flex-orange",
-      "value": "#E09A48",
+      "value": "#E09A48"
     },
     {
       "name": "flex-seafoam",
-      "value": "#BACFDA",
+      "value": "#BACFDA"
     },
     {
       "name": "flex-teal",
-      "value": "#347881",
+      "value": "#347881"
     },
     {
       "name": "Angular Red",
@@ -153,12 +150,76 @@
     {
       "name": "Gloom Glam Pink",
       "value": "#F5AAFD"
+    },
+    {
+      "name": "Pepto Pink",
+      "value": "#da6a92"
+    },
+    {
+      "name": "Peach Emoji Skintone",
+      "value": "#faa49d"
+    },
+    {
+      "name": "Royal Blue",
+      "value": "#4540df"
+    },
+    {
+      "name": "Airtable Pink",
+      "value": "#f04371"
+    },
+    {
+      "name": "Cool Green",
+      "value": "#22a16d"
+    },
+    {
+      "name": "Warm Blue",
+      "value": "#446aad"
+    },
+    {
+      "name": "Lilac",
+      "value": "#8899eb"
+    },
+    {
+      "name": "Light Green",
+      "value": "#53e996"
+    },
+    {
+      "name": "Pebble",
+      "value": "#cedbc5"
+    },
+    {
+      "name": "Cloud Pink",
+      "value": "#dad2f9"
+    },
+    {
+      "name": "Vibrant Teal",
+      "value": "#119b9c"
+    },
+    {
+      "name": "Cerulean Midday Sky",
+      "value": "#67a1fe"
+    },
+    {
+      "name": "Taxi Cab Yellow",
+      "value": "#feb24b"
+    },
+    {
+      "name": "Royal Indigo",
+      "value": "#481ccb"
+    },
+    {
+      "name": "Salmon",
+      "value": "#f57665"
+    },
+    {
+      "name": "Ballet Slipper",
+      "value": "#c09c92"
     }
   ],
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "window.restoreWindows": "all",
-  "window.title": "${rootName}${separator}${activeEditorShort}",
+  "window.title": "${activeEditorMedium}${separator}${separator}${rootName}",
   "window.newWindowDimensions": "inherit",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
@@ -184,8 +245,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
     "**/dist": true,
-    // "**/lib": true
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -213,19 +279,83 @@
     "workbench.action.terminal.resizePaneUp",
     "workbench.action.terminal.resizePaneDown"
   ],
-  "terminal.integrated.tabs.location": "left",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.sideBar.location": "right",
-  "window.zoomLevel": 1
+  "emmet.showExpandedAbbreviation": "never",
+  "security.workspace.trust.enabled": false,
+
+  "browser-preview.startUrl": "http://app.localhost:3000",
+
+  // Theme Setup.
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "i Light",
+  "workbench.preferredDarkColorTheme": "i Night",
+  "workbench.preferredLightColorTheme": "i Light",
+  "workbench.preferredHighContrastColorTheme": "i Night",
+
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": 600,
+  "terminal.integrated.fontWeightBold": 900,
+  "workbench.iconTheme": "file-icons",
+  "editor.fontFamily": "Operator Mono, Dank Mono, FiraCode-Retina, Fira Code,  Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "Operator Mono, Dank Mono, FiraCode-Retina, Fira Code,  Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 17,
+  "editor.lineHeight": 24.65,
+  "editor.letterSpacing": 0.5,
+  "editor.fontWeight": "900",
+  "editor.fontLigatures": true,
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 5,
+  "editor.cursorBlinking": "solid",
+  "editor.renderWhitespace": "all",
+  "editor.snippetSuggestions": "top",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.enablePreview": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  // Formatting Optional.
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true,
+  "eslint.run": "onSave",
+  // MacOS Only Settings.
+  "workbench.fontAliasing": "antialiased",
+  "terminal.integrated.macOptionIsMeta": true,
+  "workbench.statusBar.feedback.visible": false,
+  // SOP's highlight matching tag setting.
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "full": {
+        "highlight": "rgba(165, 153, 233, 0.3)"
+      }
+    }
+  },
+  // SOP's Import Cost Extension Settings.
+  "importCost.largePackageColor": "#EC3A37F5",
+  "importCost.mediumPackageColor": "#B362FF",
+  "importCost.smallPackageColor": "#B362FF",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "typescript.tsserver.log": "off",
+  "explorer.sortOrderLexicographicOptions": "lower",
+  "explorer.sortOrder": "type",
+  "explorer.incrementalNaming": "smart",
+  "explorer.openEditors.visible": 4,
+  "terminal.integrated.minimumContrastRatio": 3.5,
+  "terminal.external.osxExec": "iTerm.app",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.locale": "en",
+  "typescript.referencesCodeLens.showOnAllFunctions": true,
+  "typescript.surveys.enabled": false,
+  "editor.renderLineHighlightOnlyWhenFocus": true
 }
