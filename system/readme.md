@@ -1,0 +1,1 @@
+- [ ] Add hosts configuration
