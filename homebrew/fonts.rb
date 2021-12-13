@@ -1,6 +1,5 @@
 tap 'homebrew/cask-fonts'
 
-# Fonts
 cask 'font-poppins'
 
 cask 'font-fira-sans'

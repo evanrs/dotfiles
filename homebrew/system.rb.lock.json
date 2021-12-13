@@ -557,7 +557,7 @@
         "Homebrew/homebrew-core": "d894169005f6e50f16bc658756dde2bc10140c4d",
         "CLT": "13.0.0.0.1.1630607135",
         "Xcode": "13.0",
-        "macOS": "12.0"
+        "macOS": "12.0.1"
       }
     }
   }

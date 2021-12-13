@@ -18,6 +18,8 @@ cask 'spotify'
 
 # Browsers
 cask 'firefox'
+cask 'firefox-developer-edition'
+
 cask 'google-chrome'
 cask 'google-chrome-canary'
 cask 'safari-technology-preview'
