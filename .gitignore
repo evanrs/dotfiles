@@ -1,3 +1,15 @@
+**/*cache
+
+**/node_modules
+
+
+*.lock.*
+**/*.lock.*
+**/*.lock.json
+
+**/*.local.*
+**/*.local/
+
 atom.symlink/.apm
 atom.symlink/.node-gyp
 atom.symlink/.storage
@@ -14,9 +26,5 @@ git/gitconfig.local.symlink
 
 nvm.symlink/versions
 nvm.symlink/aliases
-
-**/*cache
-
-**/node_modules
 
 vscode/user/workspaceStorage
