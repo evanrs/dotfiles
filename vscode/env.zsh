@@ -1,28 +1,26 @@
 #! /usr/bin/env zsh
 
+# set -o extendedglob
+
 function cdo() {
   for fullpath in "$@"
   do
-    basepath=$fullpath:h
-    filename=$fullpath:t
-    ext=$fullpath:t:e
-
-    if $filename == "*.code-workspace"; then;
-      open $fullpath
-    elif $filename == "*.workspace"; then;
-      open $fullpath || cdo $fullpath/workspace.code-workspace
+    if [ -d "$fullpath" ]; then;
+      cd $fullpath
+      if [[ -n *.code-workspace(#qN) ]] then;
+        open $fullpath/*.code-workspace
+      elif [[ -n *.workspace(#qN) ]] then;
+        cdo $fullpath/*.workspace
+      else
+        code $fullpath
+      fi
+    elif [ -a $fullpath ]; then;
+      echo "implement file opening for $fullpath"
+      basepath=$fullpath:h
+      code $fullpath
+      cd $basepath
     fi
   done
-
-
-  # if [ -f $1 ]; then;
-  #   # TODO use open for workspace
-  #   open $@
-  #   cd `dirname $1`;
-  # elif [ -d $1 ]; then;
-  #   code $@
-  #   cd $1
-  # fi
 }
 
 function cdco() {
