@@ -1,4 +1,37 @@
 #!/usr/bin/env zsh
 
-cd $HOME
+displayUsageAndExit() {
+  echo ""
+  echo "dotfiles -- make it better, make it fast"
+  echo ""
+  echo "Usage: dotfiles [options?]"
+  echo ""
+  echo "Options:"
+  echo "  -h, --help    Show this help message and exit"
+  echo "  -e, --edit    Open dotfiles directory for editing"
+  echo "  -p, --pull    Pull dotfiles source to use updates in session"
+  exit
+}
+
+while test $# -gt 0; do
+  case "$1" in
+  "-h" | "--help")
+    displayUsageAndExit
+    ;;
+  "-e" | "--edit")
+    code $HOME/.dotfiles
+    exit
+    ;;
+  "-p" | "--pull")
+    source $ZSH/zsh/zshrc.symlink
+    exit
+    ;;
+  *)
+    echo "Invalid option: $1"
+    displayUsageAndExit
+    ;;
+  esac
+  shift
+done
+
 code $HOME/.dotfiles
