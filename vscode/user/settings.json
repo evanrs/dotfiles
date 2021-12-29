@@ -34,11 +34,11 @@
   "editor.formatOnPaste": false,
   "atomKeymap.promptV3Features": true,
   "explorer.confirmDelete": false,
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": false,
-    "strings": true
-  },
+  // "editor.quickSuggestions": {
+  //   "other": true,
+  //   "comments": false,
+  //   "strings": true
+  // },
   "editor.suggest.localityBonus": true,
   "editor.suggestFontSize": 12,
   "editor.suggestSelection": "recentlyUsedByPrefix",
@@ -62,10 +62,13 @@
   "search.smartCase": true,
   "search.useGlobalIgnoreFiles": true,
   "search.usePCRE2": true,
-  "workbench.editor.enablePreview": false,
   "workbench.editor.swipeToNavigate": true,
   // creating files
-  "advancedNewFile.convenienceOptions": ["current", "last", "root"],
+  "advancedNewFile.convenienceOptions": [
+    "current",
+    "last",
+    "root"
+  ],
   "peacock.favoriteColors": [
     {
       "name": "flex-peach",
@@ -226,46 +229,69 @@
   "flow.logLevel": "error",
   "debug.internalConsoleOptions": "neverOpen",
   "comments.openPanel": "neverOpen",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  //
+  //  file types and stuff
+  //
   "files.associations": {
-    "*.jenkinsfile": "groovy"
+    ".symlink": "shellscript",
+    ".yml.symlink": "shellscript",
+    ".json.symlink": "shellscript",
+    ".hosts": "shellscript",
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.exclude": {
-    "**/.git": true,
-    "**/.DS_Store": true,
-    "**/dist": true,
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
   "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[graphql]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[hosts]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  //
+  //
+  //
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.DS_Store": true,
+    "**/.factorypath": true,
+    "**/.git": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.vscode": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/npm-lock.*": true,
+    "**/pnpm-lock.*": true,
+    "**/yarn.*": true
+  },
   "workbench.startupEditor": "none",
   "files.insertFinalNewline": true,
-  "[java]": {
-    "editor.formatOnSave": false
-  },
   "git.autofetch": true,
-  "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": false,
   "terminal.integrated.allowWorkspaceConfiguration": true,
   "terminal.integrated.cursorBlinking": true,
@@ -280,33 +306,25 @@
     "workbench.action.terminal.resizePaneDown"
   ],
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "*.plist": "default"
   },
   "emmet.showExpandedAbbreviation": "never",
   "security.workspace.trust.enabled": false,
-
   "browser-preview.startUrl": "http://app.localhost:3000",
-
   // Theme Setup.
   "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "i Light",
-  "workbench.preferredDarkColorTheme": "i Night",
-  "workbench.preferredLightColorTheme": "i Light",
-  "workbench.preferredHighContrastColorTheme": "i Night",
-
+  "workbench.preferredDarkColorTheme": "Palenight Operator",
+  "workbench.preferredLightColorTheme": "Overflow Light (rainglow)",
+  "workbench.preferredHighContrastColorTheme": "SynthWave '84",
+  "workbench.colorTheme": "Overflow Light (rainglow)",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeight": 600,
   "terminal.integrated.fontWeightBold": 900,
   "workbench.iconTheme": "file-icons",
   "editor.fontFamily": "Operator Mono, Dank Mono, FiraCode-Retina, Fira Code,  Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontFamily": "Operator Mono, Dank Mono, FiraCode-Retina, Fira Code,  Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 17,
+  "editor.fontSize": 18,
   "editor.lineHeight": 24.65,
   "editor.letterSpacing": 0.5,
   "editor.fontWeight": "900",
@@ -315,14 +333,11 @@
   "editor.cursorWidth": 5,
   "editor.cursorBlinking": "solid",
   "editor.renderWhitespace": "all",
-  "editor.snippetSuggestions": "top",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.enablePreview": false,
   "explorer.confirmDragAndDrop": false,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  // Formatting Optional.
-  "editor.formatOnSave": true,
   "prettier.eslintIntegration": true,
   "eslint.run": "onSave",
   // MacOS Only Settings.
@@ -357,5 +372,27 @@
   "typescript.locale": "en",
   "typescript.referencesCodeLens.showOnAllFunctions": true,
   "typescript.surveys.enabled": false,
-  "editor.renderLineHighlightOnlyWhenFocus": true
+  "editor.renderLineHighlightOnlyWhenFocus": true,
+  "autoHide.panelDelay": 0,
+  "autoHide.sideBarDelay": 0,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "keyboard.touchbar.enabled": false,
+  "files.simpleDialog.enable": true,
+  "search.quickOpen.history.filterSortOrder": "recency",
+  "search.sortOrder": "modified",
+  "workbench.editor.showIcons": false,
+  "workbench.editor.sharedViewState": true,
+  "workbench.editor.scrollToSwitchTabs": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.preview": true,
+  "editor.suggest.showClasses": false,
+  "editor.suggest.showConstants": false,
+  "editor.suggest.showConstructors": false,
+  "editor.suggest.showStatusBar": true,
+  "autoHide.autoHideSideBar": false,
+  "autoHide.autoHidePanel": false,
+  "terminal.integrated.tabs.enabled": false,
+  "workbench.sideBar.location": "right",
+  "autoHide.hideOnOpen": false,
+  "editor.formatOnSave": true,
 }

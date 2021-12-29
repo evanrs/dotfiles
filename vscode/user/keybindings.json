@@ -25,7 +25,7 @@
     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+;",
+    "key": "cmd+; cmd+;",
     "command": "workbench.action.togglePanel"
   },
   {
@@ -73,7 +73,7 @@
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
-    "key": "cmd+;",
+    "key": "cmd+; cmd+;",
     "command": "workbench.action.terminal.focus",
     "when": "!terminalFocus"
   },
@@ -124,7 +124,7 @@
     "command": "workbench.action.terminal.moveToTerminalPanel"
   },
   {
-    "key": "cmd+/ cmd+k",
+    "key": "cmd+k up",
     "command": "workbench.action.terminal.clear",
     "when": "terminalFocus && terminalProcessSupported"
   },
@@ -134,11 +134,11 @@
     "when": "terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "cmd+/ cmd+;",
+    "key": "cmd+/ cmd+,",
     "command": "workbench.action.openWorkspaceSettings"
   },
   {
-    "key": "cmd+/ ctrl+;",
+    "key": "cmd+/ shift+cmd+,",
     "command": "workbench.action.openWorkspaceSettingsFile"
   },
   {
@@ -198,5 +198,71 @@
   {
     "key": "shift+cmd+b",
     "command": "workbench.view.extension.bookmarks"
+  },
+  {
+    "key": "cmd+/ s",
+    "command": "autoHide.toggleHideSideBar"
+  },
+  {
+    "key": "cmd+/ p",
+    "command": "autoHide.toggleHidePanel"
+  },
+  {
+    "key": "cmd+/ cmd+=",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "-workbench.action.terminal.resizePaneRight",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-workbench.action.terminal.clear",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+/ tab",
+    "command": "workbench.action.nextPanelView"
+  },
+  {
+    "key": "cmd+/ shift+tab",
+    "command": "workbench.action.previousPanelView"
+  },
+  {
+    "key": "cmd+; left",
+    "command": "workbench.action.createTerminalEditor"
+  },
+  {
+    "key": "cmd+/ shift+;",
+    "command": "workbench.action.createTerminalEditorSide"
+  },
+  {
+    "key": "cmd+;",
+    "command": "workbench.action.createTerminalEditor"
+  },
+  {
+    "key": "cmd+; right",
+    "command": "workbench.action.createTerminalEditorSide"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.killEditor",
+    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.terminal.killEditor",
+    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.killEditor",
+    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
   }
 ]
