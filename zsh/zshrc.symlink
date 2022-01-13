@@ -14,43 +14,49 @@ then
   source ~/.localrc
 fi
 
-# all of our zsh files
-typeset -U config_files
-config_files=($ZSH/*/*.zsh)
+function source-dotfile-zsh() {
+  target=${1:-ZSH}
+  print_events=true
+  # all of our zsh files
+  typeset -U config_files
+  config_files=($target/*/*.zsh)
 
-print_events=${PRINT_LOAD_EVENTS:-false}
+  print_events=${PRINT_LOAD_EVENTS:-false}
 
-# load the path files
-for file in ${(M)config_files:#*/path.zsh}
-do
-  if [ $print_events = true ]
-  then
-    echo "Adding to path $file"
-  fi
+  # load the path files
+  for file in ${(M)config_files:#*/path.zsh}
+  do
+    if [ $print_events = true ]
+    then
+      echo "Adding to path $file"
+    fi
 
-  source $file
-done
+    source $file
+  done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
-  if [ $print_events = true ]
-  then
-    echo "Sourcing $file"
-  fi
+  # load everything but the path and completion files
+  for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+  do
+    if [ $print_events = true ]
+    then
+      echo "Sourcing $file"
+    fi
 
-  source $file
-done
+    source $file
+  done
 
-# load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}
-do
-  if [ $print_events = true ]
-  then
-      echo "Adding to completions $file"
-  fi
+  # load every completion after autocomplete loads
+  for file in ${(M)config_files:#*/completion.zsh}
+  do
+    if [ $print_events = true ]
+    then
+        echo "Adding to completions $file"
+    fi
 
-  source $file
-done
+    source $file
+  done
 
-unset config_files
+  unset config_files
+}
+
+source-dotfile-zsh;
