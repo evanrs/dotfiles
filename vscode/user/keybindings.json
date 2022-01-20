@@ -50,32 +50,12 @@
     "when": "editorFocus"
   },
   {
-    "key": "cmd+t",
-    "command": "workbench.action.terminal.new",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+shift+`",
-    "command": "-workbench.action.terminal.new",
-    "when": "terminalProcessSupported"
-  },
-  {
-    "key": "cmd+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
     "key": "shift+cmd+a",
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
     "key": "cmd+'",
     "command": "workbench.action.focusActiveEditorGroup"
-  },
-  {
-    "key": "cmd+; cmd+;",
-    "command": "workbench.action.terminal.focus",
-    "when": "!terminalFocus"
   },
   {
     "key": "ctrl+cmd+\\",
@@ -120,66 +100,12 @@
     "command": "fileutils.newFile"
   },
   {
-    "key": "cmd+/ shift+p",
-    "command": "workbench.action.terminal.moveToTerminalPanel"
-  },
-  {
-    "key": "cmd+k up",
-    "command": "workbench.action.terminal.clear",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+k",
-    "command": "-workbench.action.terminal.clear",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
     "key": "cmd+/ cmd+,",
     "command": "workbench.action.openWorkspaceSettings"
   },
   {
     "key": "cmd+/ shift+cmd+,",
     "command": "workbench.action.openWorkspaceSettingsFile"
-  },
-  {
-    "key": "shift+alt+left",
-    "command": "workbench.action.terminal.resizePaneLeft",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+cmd+left",
-    "command": "-workbench.action.terminal.resizePaneLeft",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+down",
-    "command": "workbench.action.terminal.resizePaneDown",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+cmd+down",
-    "command": "-workbench.action.terminal.resizePaneDown",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+right",
-    "command": "workbench.action.terminal.resizePaneRight",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+cmd+right",
-    "command": "-workbench.action.terminal.resizePaneRight",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+up",
-    "command": "workbench.action.terminal.resizePaneUp",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+cmd+up",
-    "command": "-workbench.action.terminal.resizePaneUp",
-    "when": "terminalFocus && terminalProcessSupported"
   },
   {
     "key": "cmd+/ cmd+/",
@@ -212,27 +138,100 @@
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
-    "key": "ctrl+cmd+right",
-    "command": "-workbench.action.terminal.resizePaneRight",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+k cmd+k",
-    "command": "workbench.action.terminal.clear",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+k",
-    "command": "-workbench.action.terminal.clear",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
     "key": "cmd+/ tab",
     "command": "workbench.action.nextPanelView"
   },
   {
     "key": "cmd+/ shift+tab",
     "command": "workbench.action.previousPanelView"
+  },
+  {
+    "key": "cmd+k ctrl+shift+alt+cmd+left",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "cmd+k left",
+    "command": "-workbench.action.splitEditor"
+  },
+  /// TERMINAL STUUUFFFS 😱
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus && terminalHasBeenCreated"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+; cmd+;",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "cmd+/ shift+p",
+    "command": "workbench.action.terminal.moveToTerminalPanel"
+  },
+  {
+    "key": "cmd+k up",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-workbench.action.terminal.clear",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+left",
+    "command": "workbench.action.terminal.resizePaneLeft",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+left",
+    "command": "-workbench.action.terminal.resizePaneLeft",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+down",
+    "command": "-workbench.action.terminal.resizePaneDown",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "workbench.action.terminal.resizePaneRight",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "-workbench.action.terminal.resizePaneRight",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+up",
+    "command": "-workbench.action.terminal.resizePaneUp",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "-workbench.action.terminal.resizePaneRight",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
     "key": "cmd+; left",
@@ -251,18 +250,13 @@
     "command": "workbench.action.createTerminalEditorSide"
   },
   {
-    "key": "cmd+w",
-    "command": "workbench.action.terminal.killEditor",
-    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
+    "key": "cmd+v",
+    "command": "workbench.action.terminal.paste",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated"
   },
   {
-    "key": "cmd+w",
-    "command": "-workbench.action.terminal.killEditor",
-    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated"
   },
-  {
-    "key": "cmd+w",
-    "command": "workbench.action.terminal.killEditor",
-    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
-  }
 ]
