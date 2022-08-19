@@ -10,6 +10,7 @@ type Result<T, E> = { value?: Value<T> } & (
   | { status: "Failure"; error?: E }
   | { status: "Success"; value: Value<T> }
 );
+
 export function run<T, E extends unknown>(process: Process<T>) {
   const result = resultFor(process);
   const valueOf = () => Promise.resolve(result.value);
