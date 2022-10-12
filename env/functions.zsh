@@ -8,3 +8,8 @@ function pbd() {
 function gs.() {
   git status .
 }
+
+function ip.() {
+  # note: npm install -g dev-ip
+  dev-ip | sed "s/'/\"/g" | jq ".[0]" | sed "s/\"//g"
+}
