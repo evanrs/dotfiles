@@ -10,22 +10,54 @@ function gs.() {
 }
 
 function ip.() {
-  devip=$(pnpm --silent --package=dev-ip dlx dev-ip)
-  value=$(echo $devip | sed "s/'/\"/g" | jq ".[0]" | sed "s/\"//g" | sed "s/^/http\:\/\//g")
+  zparseopts -D -E -A opts \
+    -help: h:- \
+    -port: p:: \
+    -protocol: t::
 
-  zparseopts -- p+:=port -port+:=port
-  if [ -z "$port" ]; then
-  else
-    value=$(echo $value | sed "s/\$/\:$port[#]/g")
+  help=$(expr $#opts[--help] + $#opts[-h])
+  port=${opts[--port]:-${opts[-p]}}
+  protocol=${opts[--protocol]:-$opts[-t]}
+
+  if (($help)); then
+    I=$(echo $0 | sed "s/./ /g")
+    print -rC1 -- \
+      "$0 [-h|--help]" \
+      "$I show this command" \
+      "" \
+      "$0 [-v|--verbose] " \
+      "$I [-p|--port=<number>]" \
+      "$I [-t|--protocol=<string>]"
+    return
+  fi
+
+  devip=$(pnpm --silent --package=dev-ip dlx dev-ip)
+  value=$(echo $devip | sed "s/'/\"/g" | jq ".[0]" | sed "s/\"//g" | sed "s/^/${protocol:-"http:"}\/\//g")
+
+  if (($#port)); then
+    value=$(echo $value | sed "s/\$/\:$port/g" | sed "s/\s|\n//g")
   fi
 
   echo $value
 }
 
 function ip.web() {
-  ip. $@ | xargs -n 1 open -u
+  echo $(ip. $@) | xargs -n 1 open -u
 }
 
 function ip.ios() {
-  ip. $@ | xargs -n 1 xcrun simctl openurl booted
+  echo $(ip. $@) | xargs -n 1 xcrun simctl openurl booted
+}
+
+function cmd.copy() {
+  # only works in zsh
+  echo $(r) | pbcopy
+}
+
+function yarn-patch() {
+  source=$(yarn patch $1 --json | jq --raw-output .path)
+  callback=yarn patch-commit -s $source
+  echo $source | xargs -n1 code
+  echo $callback | pbcopy
+  echo $callback
 }
