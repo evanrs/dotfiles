@@ -9,6 +9,10 @@ function gs.() {
   git status .
 }
 
+function gpa.() {
+  git remote | xargs -L1 git push --all
+}
+
 function ip.() {
   zparseopts -D -E -A opts \
     -help: h:- \
