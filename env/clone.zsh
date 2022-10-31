@@ -1,5 +1,11 @@
 #! /usr/bin/env zsh
 
+# optional project mods
+#  — reset yarn, check cache, non immutable
+#  — apply patches to the codebase (by file sha)
+#    ex: always needing to enable debugging,
+#        or not rendering a component
+
 # when creating a project source, copy all the
 # .vscode folders and maintain folder structure
 # find . -path */.vscode -not -path ./node_modules/* | xargs -n1 -I % cp -r % ../.fc/%
@@ -48,6 +54,7 @@ function clone() {
   fi
 
   # Collect shared items
+  attn Collect shared items
   cd $src
     sourceDir=$(pwd)
     editorSettings=$(find . -path */.vscode -not -path */node_modules/*)
@@ -57,9 +64,11 @@ function clone() {
   # set -e
 
   # Clone
+  attn Clone
   git clone $src $dest
 
   # Prepare
+  attn Prepare
   cd ./$dest
     # Correct remote to match project
     git remote remove origin
@@ -72,33 +81,78 @@ function clone() {
 
     # Pull latest updates
     # TODO: if --pull or clonerc.pull are truthy
-      git pull --rebase origin $main
+      # git pull --rebase origin $main
 
-    git checkout -b $to
+    (git checkout $to || git checkout -b $to) >>/dev/null
+    # We always pull, this is not configurable …
+    git pull --rebase --set-upstream origin $to || echo "::: no remote branch, not updating :::"
 
+    # Share resoures
+    attn Share Resources
     # Link shared resources: .vscode, caches
-    echo $editorSettings | xargs -n1 -I % ln -sFv $sourceDir/% %
-    mkdir -p $sourceDir/.yarn/cache
-    ln -sFv $src/.yarn/cache .yarn/cache
-
-    # Copy unshared resources: .envrc
-    cp $src/.envrc .envrc
-
-    # Bootstrap project
-    # - ideally expect a root ./bootstrap script,
-    #   but for now we assume Frontend Core
-    timeout 15 yarn install --immutable
-    if [ $? -eq 124 ]; then
-      yarn install --immutable
-    fi
-    # or .ghostrc for commands to run
-    yarn build:packages
-
-    # TODO: incrementing parameter inputs
-    # count=$(echo $prevCountOrWhatevs)
-    # echo $(expr $count + 1) >> '.envrc'
-
     # TODO: use default editor from:
     #       project setting, .ghostrc shared setting, or env
     # TODO: use editor selection to copy editor specifc preferences
+    #   - share editor settings
+    echo $editorSettings | xargs -n1 -I % ln -sFv $sourceDir/% %
+    #   - share cache
+    mkdir -p $sourceDir/.yarn/cache
+    ln -sFv $src/.yarn/cache .yarn/cache
+    #   - clone environment: .envrc …
+    cp $src/.envrc .envrc && eval "$(direnv export zsh)"
+
+    # Apply project mods:
+    attn Modify
+    # - custom port mod
+    echo export port=`portplz` >> .envrc
+    # TODO: incrementing parameter inputs
+    # - incrementing global mod
+    # port=$(echo $portMax)
+    # echo $(expr $portMax + 1) >> .envrc
+
+    # Bootstrap project
+    attn Bootstrap
+    for ((i=0,x=1; i<10 && x; i+=1)); do
+      # this would be handled in their bootstrap script
+      bootstrap;
+      x=$(( $? == 124 ))
+    done
+}
+
+function attn () {
+  echo
+  echo
+  echo "$@"
+  sleep 1
+  echo
+}
+
+function bootstrap() {
+  timeout 120 yarn install --immutable
+
+  # or .ghostrc for commands to run
+  yarn build:packages
+}
+
+function portplz() {
+  a="$(random)$(random)"
+  # b="$(random)$(random)"
+  # c=" ($a % 10) + ($b % 10) "
+  # out=$(eval expr $c)
+  # out=`eval expr  ($a % 10) + ($b % 10)`
+
+  # TODO: configurable base port
+  echo "$(expr $a + 4000)"
+}
+
+function rand__test__() {
+  for (( x=1; x > 0; x+=1 )); do;
+    echo "$(rand)"
+    source ~/.zshrc `random`
+    # v=($(rand) $(rand) $(rand) $(rand) $(rand) $(rand) $(rand) $(rand))
+    # echo $v | awk '{ printf "%-4s %-4s %-4s %-4s %-4s %-4s %-4s %-4s\n", $1, $2, $3, $4, $5, $6, $7, $8}'
+
+    sleep 4;
+    rand__test__
+  done;
 }
