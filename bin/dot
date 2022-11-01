@@ -7,38 +7,44 @@
 
 set -e
 
-parentDirectory="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P)"
-dotfilesDirectory="$(cd "$( dirname "$parentDirectory" )" && pwd -P)"
+parentDirectory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+dotfilesDirectory="$(cd "$(dirname "$parentDirectory")" && pwd -P)"
+
+export ZSH=$HOME/.dotfiles
 
 displayUsageAndExit() {
-	echo "dot -- dotfiles management"
-	echo ""
-	echo "Usage: dot [options]"
-	echo ""
-	echo "Options:"
-	echo "  -e, --edit    Open dotfiles directory for editing"
-	echo "  -h, --help    Show this help message and exit"
-	exit
+  echo "dot -- dotfiles management"
+  echo ""
+  echo "Usage: dot [options]"
+  echo ""
+  echo "Options:"
+  echo "  -e, --edit    Open dotfiles directory for editing"
+  echo "  -h, --help    Show this help message and exit"
+  echo "  -p, --pull    Source dot files"
+  exit
 }
 
 while test $# -gt 0; do
-	case "$1" in
-		"-h"|"--help")
-			displayUsageAndExit
-			;;
-		"-e"|"--edit")
-			exec "$EDITOR" "$dotfilesDirectory"
-			exit
-			;;
-		*)
-			echo "Invalid option: $1"
-			displayUsageAndExit
-			;;
-	esac
-	shift
+  case "$1" in
+  "-h" | "--help")
+    displayUsageAndExit
+    ;;
+  "-e" | "--edit")
+    exec "$EDITOR" "$dotfilesDirectory"
+    exit
+    ;;
+  "-p" | "--pull")
+    echo "--pull option not implemented"
+    # source $ZSH/zsh/zshrc.symlink
+    exit
+    ;;
+  *)
+    echo "Invalid option: $1"
+    displayUsageAndExit
+    ;;
+  esac
+  shift
 done
-
-export ZSH=$HOME/.dotfiles
 
 # Set macOS defaults
 $ZSH/macos/set-defaults.sh

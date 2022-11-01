@@ -9,6 +9,7 @@ brew bundle --file=./homebrew/fonts.rb || true
 echo "› brew install app"
 installed=($(brew list --cask))
 dependencies=(
+  dropbox
   alfred
   keybase
   spotify
@@ -27,12 +28,10 @@ dependencies=(
   virtualbox
   docker
   google-cloud-sdk
-  notion
-  # atom
+  atom
   sublime-text
   visual-studio-code
   sketch
-  figma
   kaleidoscope # compare files
   # gifrocket
   vlc
@@ -47,8 +46,11 @@ do
   fi
 done
 
-brew install 'mas' > dev/null
+brew install 'mas' &> dev/null
 if [ `mas list` == "" ]; then
   echo "› brew bundle app store apps"
   brew bundle --file=./homebrew/app-store-apps.rb | true
 fi
+
+
+# tucker.godek

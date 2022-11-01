@@ -1,17 +1,5 @@
 {
-  // "editor.fontSize": 18,
-  // "editor.letterSpacing": -1.62,
-  // "editor.fontSize": 16,
-  // "editor.letterSpacing": -1.02,
-  // "editor.letterSpacing": -1.22,
-  // "editor.lineHeight": 24,
-  // "editor.fontLigatures": true,
   "editor.renderLineHighlight": "all",
-  "editor.tabSize": 2,
-  // "oneDarkPro.editorTheme": "panda",
-  // "oneDarkPro.vivid": true,
-  // "oneDarkPro.bold": true,
-  // "oneDarkPro.italic": true,
   // keep windows open
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.restoreViewState": true,
@@ -20,7 +8,6 @@
   // get rid of the extras
   //
   "workbench.activityBar.visible": false,
-  "editor.renderIndentGuides": false,
   "scm.diffDecorationsGutterWidth": 1,
   "editor.minimap.enabled": false,
   "git.decorations.enabled": false,
@@ -39,10 +26,19 @@
   //   "comments": false,
   //   "strings": true
   // },
-  "editor.suggest.localityBonus": true,
-  "editor.suggestFontSize": 12,
-  "editor.suggestSelection": "recentlyUsedByPrefix",
-  "editor.suggestOnTriggerCharacters": false,
+  // "editor.suggest.localityBonus": true,
+  // "editor.suggestFontSize": 14,
+  // "editor.suggestSelection": "recentlyUsedByPrefix",
+  // "editor.suggestOnTriggerCharacters": false,
+  // "editor.suggest.insertMode": "replace",
+  // "editor.suggest.preview": true,
+  // "editor.suggest.showClasses": false,
+  // "editor.suggest.showConstants": false,
+  // "editor.suggest.showConstructors": false,
+  // "editor.suggest.showStatusBar": true,
+  // "editor.suggest.showWords": false,
+  // "editor.suggest.showDeprecated": false,
+  // "editor.suggest.showIssues": false
   "breadcrumbs.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "terminal.integrated.enableBell": false,
@@ -64,11 +60,7 @@
   "search.usePCRE2": true,
   "workbench.editor.swipeToNavigate": true,
   // creating files
-  "advancedNewFile.convenienceOptions": [
-    "current",
-    "last",
-    "root"
-  ],
+  "advancedNewFile.convenienceOptions": ["current", "last", "root"],
   "peacock.favoriteColors": [
     {
       "name": "flex-peach",
@@ -217,6 +209,98 @@
     {
       "name": "Ballet Slipper",
       "value": "#c09c92"
+    },
+    {
+      "name": "daisy",
+      "value": "#ded479"
+    },
+    {
+      "name": "bubblegum",
+      "value": "#f9bfe5"
+    },
+    {
+      "name": "lavendar",
+      "value": "#8aa2f0"
+    },
+    {
+      "name": "miami pink",
+      "value": "#da346c"
+    },
+    {
+      "name": "minecraft green",
+      "value": "#1ae436"
+    },
+    {
+      "name": "teal",
+      "value": "#086a6c"
+    },
+    {
+      "name": "nike",
+      "value": "#acfb55"
+    },
+    {
+      "name": "pinkslip",
+      "value": "#fab2a7"
+    },
+    {
+      "name": "leather",
+      "value": "#7a4b45"
+    },
+    {
+      "name": "mac&cheese",
+      "value": "#c26e07"
+    },
+    {
+      "name": "skyblue",
+      "value": "#4fbaff"
+    },
+    {
+      "name": "radioactive",
+      "value": "#4cf55b"
+    },
+    {
+      "name": "emerald",
+      "value": "#107562"
+    },
+    {
+      "name": "bsod",
+      "value": "#0938d8"
+    },
+    {
+      "name": "vodka sauce",
+      "value": "#f85b36"
+    },
+    {
+      "name": "blue",
+      "value": "#1c43e0"
+    },
+    {
+      "name": "flesh",
+      "value": "#bea9c6"
+    },
+    {
+      "name": "uv",
+      "value": "#5e4af8"
+    },
+    {
+      "name": "industrial orange",
+      "value": "#df5e17"
+    },
+    {
+      "name": "paper",
+      "value": "#c5b4a8"
+    },
+    {
+      "name": "🗽",
+      "value": "#1da98b"
+    },
+    {
+      "name": "Forest Green",
+      "value": "#38632f"
+    },
+    {
+      "name": "sky blue",
+      "value": "#17b9ee"
     }
   ],
   "files.trimFinalNewlines": true,
@@ -224,8 +308,6 @@
   "window.restoreWindows": "all",
   "window.title": "${activeEditorMedium}${separator}${separator}${rootName}",
   "window.newWindowDimensions": "inherit",
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
   "flow.logLevel": "error",
   "debug.internalConsoleOptions": "neverOpen",
   "comments.openPanel": "neverOpen",
@@ -236,11 +318,23 @@
     ".symlink": "shellscript",
     ".yml.symlink": "shellscript",
     ".json.symlink": "shellscript",
-    ".hosts": "shellscript",
+    ".hosts": "shellscript"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[shellscript]": {
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[hosts]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -248,29 +342,20 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[graphql]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[hosts]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
   //
   //
@@ -283,11 +368,12 @@
     "**/.project": true,
     "**/.settings": true,
     "**/.vscode": true,
-    "**/dist": true,
+    "**/dist": false,
     "**/node_modules": true,
-    "**/npm-lock.*": true,
-    "**/pnpm-lock.*": true,
-    "**/yarn.*": true
+    "**/npm-lock.*": false,
+    "**/pnpm-lock.*": false,
+    "**/yarn.*": false,
+    "**/mover": true
   },
   "workbench.startupEditor": "none",
   "files.insertFinalNewline": true,
@@ -311,29 +397,27 @@
   },
   "emmet.showExpandedAbbreviation": "never",
   "security.workspace.trust.enabled": false,
-  "browser-preview.startUrl": "http://app.localhost:3000",
+  "browser-preview.startUrl": "http://localhost:3000",
   // Theme Setup.
   "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "Palenight Operator",
-  "workbench.preferredLightColorTheme": "Overflow Light (rainglow)",
+  "workbench.preferredDarkColorTheme": "Noctis Minimus",
+  "workbench.preferredLightColorTheme": "Noctis Lux",
   "workbench.preferredHighContrastColorTheme": "SynthWave '84",
-  "workbench.colorTheme": "Overflow Light (rainglow)",
-  "terminal.integrated.fontSize": 16,
+  "workbench.colorTheme": "Noctis Lux",
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": 600,
   "terminal.integrated.fontWeightBold": 900,
-  "workbench.iconTheme": "file-icons",
-  "editor.fontFamily": "Operator Mono, Dank Mono, FiraCode-Retina, Fira Code,  Menlo, Monaco, 'Courier New', monospace",
-  "terminal.integrated.fontFamily": "Operator Mono, Dank Mono, FiraCode-Retina, Fira Code,  Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 18,
-  "editor.lineHeight": 24.65,
-  "editor.letterSpacing": 0.5,
-  "editor.fontWeight": "900",
+  "editor.fontFamily": "Comic Code Ligatures, Operator Mono, Dank Mono, FiraCode-Retina, Fira Code,  Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "Comic Code Ligatures, Operator Mono, Dank Mono, FiraCode-Retina, Fira Code,  Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 17.61,
+  "editor.lineHeight": 25.65,
+  // "editor.letterSpacing": 0.25,
+  "editor.fontWeight": 600,
   "editor.fontLigatures": true,
   "editor.cursorStyle": "line",
   "editor.cursorWidth": 5,
   "editor.cursorBlinking": "solid",
   "editor.renderWhitespace": "all",
-  "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.enablePreview": false,
   "explorer.confirmDragAndDrop": false,
   "files.trimTrailingWhitespace": true,
@@ -345,7 +429,7 @@
   "terminal.integrated.macOptionIsMeta": true,
   "workbench.statusBar.feedback.visible": false,
   // SOP's highlight matching tag setting.
-  "highlight-matching-tag.styles": {
+  "highlight-matching-tßag.styles": {
     "opening": {
       "full": {
         "highlight": "rgba(165, 153, 233, 0.3)"
@@ -362,37 +446,113 @@
   "editor.bracketPairColorization.enabled": true,
   "typescript.tsserver.log": "off",
   "explorer.sortOrderLexicographicOptions": "lower",
-  "explorer.sortOrder": "type",
+  "explorer.sortOrder": "foldersNestsFiles",
   "explorer.incrementalNaming": "smart",
   "explorer.openEditors.visible": 4,
   "terminal.integrated.minimumContrastRatio": 3.5,
   "terminal.external.osxExec": "iTerm.app",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "typescript.implementationsCodeLens.enabled": true,
   "typescript.locale": "en",
-  "typescript.referencesCodeLens.showOnAllFunctions": true,
-  "typescript.surveys.enabled": false,
   "editor.renderLineHighlightOnlyWhenFocus": true,
   "autoHide.panelDelay": 0,
   "autoHide.sideBarDelay": 0,
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
-  "keyboard.touchbar.enabled": false,
   "files.simpleDialog.enable": true,
   "search.quickOpen.history.filterSortOrder": "recency",
   "search.sortOrder": "modified",
   "workbench.editor.showIcons": false,
   "workbench.editor.sharedViewState": true,
   "workbench.editor.scrollToSwitchTabs": true,
-  "editor.suggest.insertMode": "replace",
-  "editor.suggest.preview": true,
-  "editor.suggest.showClasses": false,
-  "editor.suggest.showConstants": false,
-  "editor.suggest.showConstructors": false,
-  "editor.suggest.showStatusBar": true,
-  "autoHide.autoHideSideBar": false,
-  "autoHide.autoHidePanel": false,
-  "terminal.integrated.tabs.enabled": false,
-  "workbench.sideBar.location": "right",
-  "autoHide.hideOnOpen": false,
-  "editor.formatOnSave": true,
+  "colorInfo.languages": [
+    {
+      "selector": "ts",
+      "colors": "css"
+    },
+    {
+      "selector": "tsx",
+      "colors": "css"
+    },
+    {
+      "selector": "javascript",
+      "colors": "css"
+    },
+    {
+      "selector": "javascriptreact",
+      "colors": "css"
+    },
+    {
+      "selector": "shellscript",
+      "colors": "css"
+    },
+    {
+      "selector": "typescript",
+      "colors": "css"
+    },
+    {
+      "selector": "typescriptreact",
+      "colors": "css"
+    }
+  ],
+  "colorInfo.fields": ["preview-square-xl"],
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.quickSuggestionsDelay": 400,
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "workspaceExplorer.workspaceStorageDirectory": "~/projects",
+  "workspaceSidebar.folder": "~/projects",
+  "workspaceSidebar.depth": 3,
+  // "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.gpuAcceleration": "on",
+  "vscode_vibrancy.opacity": 0,
+  "vscode_vibrancy.theme": "Default Light",
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "typescript.tsserver.maxTsServerMemory": 5120,
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.enable": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "editor.foldingImportsByDefault": true,
+  "json.format.enable": false,
+  "editor.guides.indentation": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "tsconfig.json": "tsconfig.*.json",
+    "*.ts": "${capture}.local.ts, ${capture}.local.*.ts,  ${capture}.draft.ts, ${capture}.draft-*.ts, ${capture}.*-draft.ts,  ${capture}.test.ts, ${capture}.js",
+    "*.tsx": "${capture}.local.tsx, ${capture}.local.*.tsx,  ${capture}.draft.tsx, ${capture}.draft-*.tsx, ${capture}.*-draft.tsx,  ${capture}.ts, ${capture}.test.ts, ${capture}.test.tsx",
+    "*.js": "${capture}.local.js, ${capture}.local.*.js,  ${capture}.draft.js, ${capture}.draft-*.js, ${capture}.*-draft.js,  ${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.local.jsx, ${capture}.local.*.jsx,  ${capture}.draft.jsx, ${capture}.draft-*.jsx, ${capture}.*-draft.jsx,  ${capture}.js"
+  },
+  "oneDarkPro.italic": true,
+  "oneDarkPro.vivid": true,
+  "oneDarkPro.bold": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  "workbench.tree.indent": 22,
+  "terminal.integrated.persistentSessionScrollback": 10000,
+  "terminal.integrated.scrollback": 100000,
+  "codesnap.backgroundColor": "rgba(255, 255, 255, 0)",
+  "codesnap.shutterAction": "copy",
+  "codesnap.transparentBackground": true,
+  "codesnap.showLineNumbers": false,
+  "codesnap.containerPadding": "3rem",
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.75) 0px 20px 68px -50px",
+
+  "[Log]": {
+    "editor.fontSize": 12,
+    "editor.lineHeight": 1.5,
+    "editor.letterSpacing": -0.45,
+    "editor.fontWeight": "700"
+  },
+  "editor.tabSize": 2,
+  "explorer.excludeGitIgnore": true,
+  "editor.formatOnSave": true
 }

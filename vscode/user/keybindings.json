@@ -25,10 +25,6 @@
     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+; cmd+;",
-    "command": "workbench.action.togglePanel"
-  },
-  {
     "key": "cmd+j",
     "command": "-workbench.action.togglePanel"
   },
@@ -167,12 +163,7 @@
   {
     "key": "cmd+w",
     "command": "workbench.action.terminal.kill",
-    "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+; cmd+;",
-    "command": "workbench.action.terminal.focus",
-    "when": "!terminalFocus"
+    "when": "terminalEditorFocus || terminalFocus"
   },
   {
     "key": "cmd+/ shift+p",
@@ -258,5 +249,48 @@
     "key": "cmd+k cmd+k",
     "command": "workbench.action.terminal.clear",
     "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated"
+  },
+  {
+    "key": "cmd+; cmd+;",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "cmd+; cmd+;",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "cmd+k right",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "cmd+k shift+right",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "cmd+k right",
+    "command": "-workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "cmd+k shift+left",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "cmd+k left",
+    "command": "-workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "cmd+k left",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "-workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
   },
 ]

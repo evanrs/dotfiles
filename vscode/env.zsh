@@ -160,3 +160,41 @@ function resolveCodeArgs() {
 
   echo \t"resolveCodeArgs $folder:path? $branch:branch?"\n
 }
+
+  # if ()(($#)) (*.(abc|bak|tmp)|tmpout.wrk)(NY1); then
+      #   echo true
+      # else
+      #   echo false
+      # fi
+
+    # if $fullpath == "*.workspace"; then;
+    #   cdo $fullpath/*.code-workspace
+    #   # cd $basepath
+    # elif $fullpath == "*.code-workspace"; then;
+    #   open $fullpath
+    #   # cd $basepath
+    # else
+    #   code $fullpath
+    #   # cd $basepath
+    # fi
+      # cd $fullpath
+      # if $fullpath == "*.workspace"; then;
+      #   cdo $fullpath/*.code-workspace
+      #   # cd $basepath
+      # elif $fullpath == "*.code-workspace"; then;
+      #   open $fullpath
+      #   # cd $basepath
+      # else
+      #   code $fullpath
+      #   # cd $basepath
+      # fi
+
+    # elif [[ -a $fullpath ]]; then;
+    #   code $fullpath
+    #   cd $basepath
+    # elif [[ -d $fullpath ]]; then;
+    #   if $filename == "*.workspace"; then;
+    #     cdo $fullpath/*.code-workspace
+    #   elif
+    #     code $fullpath
+    #     cd $fullpath

@@ -1,5 +1,14 @@
 # TODO: add terminal command hook to suggest matching shortcuts
 
+function gatus() {
+  git status $@
+}
+
+function gi() {
+  curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@
+}
+
+
 function gup () {
   git pull origin $@
 }

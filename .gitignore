@@ -2,7 +2,6 @@
 
 **/node_modules
 
-
 *.lock.*
 **/*.lock.*
 **/*.lock.json
@@ -28,3 +27,7 @@ nvm.symlink/versions
 nvm.symlink/aliases
 
 vscode/user/workspaceStorage
+
+*/chrome/profile*
+
+**/elpa/*

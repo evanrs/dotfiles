@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function s3-remove-by-date--draft() {
+  # local/cloud env mappings
+  gdate={gdate:-date}
+
+  bucket="green.cmyk.nyc"
+  cutoff=$(gdate -d -2254days +"%Y-%m-%d")
+  s3list=($(aws s3 ls --recursive $bucket | sed 's/|/ /' | awk '{print $1, $4}'))
+
+  for (( ; ${#s3list[@]} > 0; )); do
+    pushedAt=${s3list[0]}
+    filepath=${s3list[1]}
+    s3list=("${s3list[@]:2}")
+
+    if [[ $pushedAt < $cutoff ]]; then
+      echo "would 🔥 $filepath from $pushedAt"
+    else
+      echo "fresh 🥑 $filepath since $pushedAt"
+    fi
+  done
+}
+
+s3-remove-by-date--draft

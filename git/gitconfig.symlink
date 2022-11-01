@@ -54,3 +54,7 @@
 	defaultBranch = main
 [pull]
 	rebase = true
+[commit]
+	gpgsign = false
+[user]
+	signingkey = 7BF04185F483ECAC

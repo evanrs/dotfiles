@@ -6,7 +6,7 @@ npmDevModules=(@types/node prettier typescript)
 npmDevTesting=(@types/jest @types/node eslint-plugin-testing-library jest jest-watch-typeahead ts-jest typescript msw)
 npmDevTestingReact=(@types/react @types/react-dom @testing-library/dom @testing-library/react @testing-library/user-event @testing-library/react-hooks)
 
-function pb {
+function pb() {
   args="$@"
 
   unset 'args[-1]'

@@ -13,25 +13,26 @@ displayUsageAndExit() {
   exit
 }
 
+args=()
+
 while test $# -gt 0; do
   case "$1" in
   "-h" | "--help")
     displayUsageAndExit
     ;;
   "-e" | "--edit")
-    code $HOME/.dotfiles
-    exit
+    continue
     ;;
   "-p" | "--pull")
     source $ZSH/zsh/zshrc.symlink
     exit
     ;;
   *)
-    echo "Invalid option: $1"
-    displayUsageAndExit
+    args=($args $1)
     ;;
+
   esac
   shift
 done
 
-code $HOME/.dotfiles
+code $HOME/.dotfiles/$args

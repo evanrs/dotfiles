@@ -1,0 +1,5 @@
+127.0.0.1 local.app    #%local.app
+127.0.0.1 local.cache  #%local.cache
+127.0.0.1 local.client #%local.client
+127.0.0.1 local.server #%local.server
+127.0.0.1 local.store  #%local.store

@@ -1,0 +1,5 @@
+#! /usr/bin/env zsh
+
+# TODO: exempt from git
+# TODO: touch on create
+# TODO: notify to populate

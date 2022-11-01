@@ -14,12 +14,16 @@ clean() {
     valvesoftware.steamclean
     wasabiclient
     zoom
+    teamviewer
+    jamf
   )
 
   # Paths to match targets from
   paths=(
     "/Library/LaunchAgents"
+    "/Library/LaunchDaemons"
     "$HOME/Library/LaunchAgents"
+    # "$HOME/Library/LaunchDaemons"
   )
 
   # List of specific services to remove
@@ -54,7 +58,7 @@ clean() {
     launchctl unload ${file} > /dev/null 2>&1;
   done
 
-  $ZSH/macos/cleanse.sh
+  . "$HOME/.dotfiles/macos/cleanse.sh"
 }
 
 disinfect() {
@@ -66,14 +70,17 @@ disinfect() {
     citrix
     GoToMeeting
     zoom
+    jamf
   )
 
   # Paths to match targets from
   paths=(
     "/Library/Application Support"
     "/Library/LaunchAgents"
+    "/Library/LaunchDaemons"
     "$HOME/Library/Application Support"
     "$HOME/Library/LaunchAgents"
+    # "$HOME/Library/LaunchDaemons"
   )
 
   # List of specific files to remove
@@ -102,4 +109,3 @@ disinfect() {
 
 clean
 disinfect
-
