@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 #! /usr/bin/env zsh
 
 # shortcut to this dotfiles path is $ZSH
@@ -15,7 +17,7 @@ then
 fi
 
 function source-dotfile-zsh() {
-  target=${1:-ZSH}
+  target=${1:-$ZSH}
   print_events=true
   # all of our zsh files
   typeset -U config_files
@@ -60,3 +62,24 @@ function source-dotfile-zsh() {
 }
 
 source-dotfile-zsh;
+export GPG_TTY=$(tty)
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# bun completions
+[ -s "/Users/evan/.bun/_bun" ] && source "/Users/evan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="/Users/evan/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/evan/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

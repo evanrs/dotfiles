@@ -1,3 +1,10 @@
+# TODO:
+# - add per directory history
+#   https://github.com/jimhester/per-directory-history
+# - check local/global storage
+# - extend with path aliases
+# - extend with custom checks, so a repo test can be used
+
 source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
 
 ##
@@ -11,12 +18,7 @@ function shortcake() {
   open https://kapeli.com/cheat_sheets/Prezto.docset/Contents/Resources/Documents/index
 }
 
-
 tabs -2
-
-autoload -Uz promptinit
-promptinit
-prompt pure
 
 eval $(thefuck --alias)
 
