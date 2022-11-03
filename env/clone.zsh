@@ -47,7 +47,7 @@ function clone() {
   fi
 
   eval dest=./$from:$(echo $to | sed -r "s/[^A-Za-z0-9-]/$delimiter/g")
-  eval src="$(cat .clorc.json | jq -cr ".paths.$from" 2>/dev/null)"
+  eval src="$(cat .ghostrc.json | jq -cr ".projects.$from" 2>/dev/null)"
   if [ -z "$src" ]; then
     echo "Could not find project '$from' in local .clorc.json"
     return;
@@ -83,7 +83,10 @@ function clone() {
     # TODO: if --pull or clonerc.pull are truthy
       # git pull --rebase origin $main
 
-    (git checkout $to || git checkout -b $to) >>/dev/null
+    git fetch origin $to >>/dev/null
+    git checkout $to >>/dev/null
+    git checkout -b $to >/dev/null
+
     # We always pull, this is not configurable …
     git pull --rebase --set-upstream origin $to || echo "::: no remote branch, not updating :::"
 
@@ -99,12 +102,14 @@ function clone() {
     mkdir -p $sourceDir/.yarn/cache
     ln -sFv $src/.yarn/cache .yarn/cache
     #   - clone environment: .envrc …
-    cp $src/.envrc .envrc && eval "$(direnv export zsh)"
+    cp $src/.envrc .envrc
+    direnv allow
+    eval "$(direnv export zsh)"
 
     # Apply project mods:
     attn Modify
     # - custom port mod
-    echo export port=`portplz` >> .envrc
+    echo export PORT=`portplz` >> .envrc
     # TODO: incrementing parameter inputs
     # - incrementing global mod
     # port=$(echo $portMax)
