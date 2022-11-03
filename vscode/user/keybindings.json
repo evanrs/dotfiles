@@ -161,11 +161,6 @@
     "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated"
   },
   {
-    "key": "cmd+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalEditorFocus || terminalFocus"
-  },
-  {
     "key": "cmd+/ shift+p",
     "command": "workbench.action.terminal.moveToTerminalPanel"
   },
@@ -225,15 +220,15 @@
     "when": "terminalEditorFocus || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "cmd+; left",
+    "key": "cmd+; enter",
     "command": "workbench.action.createTerminalEditor"
   },
   {
-    "key": "cmd+/ shift+;",
+    "key": "cmd+; shift+enter",
     "command": "workbench.action.createTerminalEditorSide"
   },
   {
-    "key": "cmd+;",
+    "key": "cmd+; left",
     "command": "workbench.action.createTerminalEditor"
   },
   {
@@ -293,4 +288,19 @@
     "command": "-workbench.action.terminal.split",
     "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
   },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.killEditor",
+    "when": "terminalEditorFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.terminal.killEditor",
+    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+  }
 ]

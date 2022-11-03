@@ -403,7 +403,7 @@
   "workbench.preferredDarkColorTheme": "Noctis Minimus",
   "workbench.preferredLightColorTheme": "Noctis Lux",
   "workbench.preferredHighContrastColorTheme": "SynthWave '84",
-  "workbench.colorTheme": "Noctis Lux",
+  "workbench.colorTheme": "Noctis Minimus",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": 600,
   "terminal.integrated.fontWeightBold": 900,
