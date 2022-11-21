@@ -22,7 +22,7 @@ function clone() {
   to=${opts[--to]:-$opts[-t]}
   # TODO: convert to props with defaults including .ghostrc
     main=main
-    pull=0
+    pull=1
     base=./
     delimiter=:
 
@@ -49,15 +49,21 @@ function clone() {
   eval dest=./$from:$(echo $to | sed -r "s/[^A-Za-z0-9-]/$delimiter/g")
   eval src="$(cat .ghostrc.json | jq -cr ".projects.$from" 2>/dev/null)"
   if [ -z "$src" ]; then
-    echo "Could not find project '$from' in local .clorc.json"
+    echo "Could not find project '$from' in local .ghostrc.json"
     return;
   fi
+
+
 
   # Collect shared items
   attn Collect shared items
   cd $src
     sourceDir=$(pwd)
+    git branch --set-upstream-to=origin/main main
+    # TODO: --skip-update option?
+    git pull --rebase origin $main
     editorSettings=$(find . -path */.vscode -not -path */node_modules/*)
+    localFiles=$(find . -path */*.local* -not -path */node_modules/*)
   cd -
 
   # Exit if a step fails
@@ -73,6 +79,7 @@ function clone() {
     # Correct remote to match project
     git remote remove origin
     git remote add origin $(cat $src/.git/config | grep url | awk '{print $3}' | head -n1)
+    git branch --set-upstream-to=origin/main main
 
     # Change to default branch
     # TODO: use --main or clonerc.main
@@ -81,14 +88,15 @@ function clone() {
 
     # Pull latest updates
     # TODO: if --pull or clonerc.pull are truthy
+    # possibly --skip-pull
       # git pull --rebase origin $main
 
     git fetch origin $to >>/dev/null
     git checkout $to >>/dev/null
-    git checkout -b $to >/dev/null
+    git checkout -b $to >>/dev/null
 
     # We always pull, this is not configurable …
-    git pull --rebase --set-upstream origin $to || echo "::: no remote branch, not updating :::"
+    git pull --rebase --set-upstream origin $to && echo "::: branch found on remote :::" || echo "::: no remote branch :::"
 
     # Share resoures
     attn Share Resources
@@ -97,7 +105,9 @@ function clone() {
     #       project setting, .ghostrc shared setting, or env
     # TODO: use editor selection to copy editor specifc preferences
     #   - share editor settings
+    #   - share .local sratch files or scripts
     echo $editorSettings | xargs -n1 -I % ln -sFv $sourceDir/% %
+    echo $localFiles | xargs -n1 -I % ln -sFv $sourceDir/% %
     #   - share cache
     mkdir -p $sourceDir/.yarn/cache
     ln -sFv $src/.yarn/cache .yarn/cache
