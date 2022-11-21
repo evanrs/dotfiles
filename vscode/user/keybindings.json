@@ -302,5 +302,14 @@
     "key": "cmd+w",
     "command": "-workbench.action.terminal.killEditor",
     "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+  },
+  {
+    "key": "cmd+; cmd+r",
+    "command": "workbench.action.terminal.rename",
+    "when": "terminalEditorFocus || terminalFocus"
+  },
+  {
+    "key": "cmd+e cmd+r",
+    "command": "fileutils.renameFile"
   }
 ]

@@ -301,6 +301,14 @@
     {
       "name": "sky blue",
       "value": "#17b9ee"
+    },
+    {
+      "name": "anthracite",
+      "value": "#4d66f9"
+    },
+    {
+      "name": "xp",
+      "value": "#4d66f9"
     }
   ],
   "files.trimFinalNewlines": true,
@@ -318,7 +326,9 @@
     ".symlink": "shellscript",
     ".yml.symlink": "shellscript",
     ".json.symlink": "shellscript",
-    ".hosts": "shellscript"
+    ".hosts": "shellscript",
+    "*.plist": "plist",
+    "*.strings": "plist"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[graphql]": {
