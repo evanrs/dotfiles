@@ -64,6 +64,7 @@ function clone() {
     git pull --rebase origin $main
     editorSettings=$(find . -path */.vscode -not -path */node_modules/*)
     localFiles=$(find . -path */*.local* -not -path */node_modules/*)
+    sampleFiles=$(find . -path */*.sample* -not -path */node_modules/*)
   cd -
 
   # Exit if a step fails
@@ -108,6 +109,7 @@ function clone() {
     #   - share .local sratch files or scripts
     echo $editorSettings | xargs -n1 -I % ln -sFv $sourceDir/% %
     echo $localFiles | xargs -n1 -I % ln -sFv $sourceDir/% %
+    echo $sampleFiles | xargs -n1 -I % cp -r $sourceDir/% %
     #   - share cache
     mkdir -p $sourceDir/.yarn/cache
     ln -sFv $src/.yarn/cache .yarn/cache
@@ -143,10 +145,10 @@ function attn () {
 }
 
 function bootstrap() {
-  timeout 120 yarn install --immutable
+  yarn install --immutable
 
   # or .ghostrc for commands to run
-  yarn build:packages
+  yarn build:packages --skip-nx-cache
 }
 
 function portplz() {
