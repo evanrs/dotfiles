@@ -48,6 +48,8 @@ function clone() {
 
   eval dest=./$from:$(echo $to | sed -r "s/[^A-Za-z0-9-]/$delimiter/g")
   eval src="$(cat .ghostrc.json | jq -cr ".projects.$from" 2>/dev/null)"
+  eval prefix="$(cat .ghostrc.json | jq -cr ".branch.prefix" 2>/dev/null)"
+  branch="$prefix$to"
   if [ -z "$src" ]; then
     echo "Could not find project '$from' in local .ghostrc.json"
     return;
@@ -92,12 +94,12 @@ function clone() {
     # possibly --skip-pull
       # git pull --rebase origin $main
 
-    git fetch origin $to >>/dev/null
-    git checkout $to >>/dev/null
-    git checkout -b $to >>/dev/null
+    git fetch origin $branch >>/dev/null
+    git checkout $branch >>/dev/null
+    git checkout -b $branch >>/dev/null
 
     # We always pull, this is not configurable …
-    git pull --rebase --set-upstream origin $to && echo "::: branch found on remote :::" || echo "::: no remote branch :::"
+    git pull --rebase --set-upstream origin $branch && echo "::: branch found on remote :::" || echo "::: no remote branch :::"
 
     # Share resoures
     attn Share Resources
