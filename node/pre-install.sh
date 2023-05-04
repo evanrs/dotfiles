@@ -18,9 +18,11 @@ volta install node
 # done
 
 # use corepack to integrate yarn and pnpm
-# npm install -g corepack
+npm install -g corepack
+
+corepack enable
 
 # install dotfiles node dependencies
-# pnpm --prefix ~/.dotfiles install
+pnpm --prefix ~/.dotfiles install
 
 $HOME/.dotfiles/node/login.sh

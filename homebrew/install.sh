@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+source $HOME/.dotfiles/homebrew/env.zsh
+
 echo "› brew bundle command line tools"
-brew bundle --file=./homebrew/command-line-tools.rb
+brew bundle --file=$HOME/.dotfiles/homebrew/command-line-tools.rb
 
 echo "› brew bundle fonts"
-brew bundle --file=./homebrew/fonts.rb || true
+brew bundle --file=$HOME/.dotfiles/homebrew/fonts.rb || true
 
 echo "› brew install app"
 installed=($(brew list --cask))
@@ -49,5 +51,5 @@ done
 brew install 'mas' >/dev/null
 if [[ "$(mas list)" == "No installed apps found" ]]; then
   echo "› brew bundle app store apps"
-  brew bundle --file=./homebrew/app-store-apps.rb | true
+  brew bundle --file=$HOME/.dotfiles/homebrew/app-store-apps.rb | true
 fi

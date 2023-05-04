@@ -7,3 +7,7 @@ git config --global diff.noprefix true
 echo "> install git assistants"
 # TODO figure out where the heck this is
 # pnpm install -g git-info
+
+source $HOME/.dotfiles/homebrew/env.zsh
+brew install gh
+gh auth login

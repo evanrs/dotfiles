@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
+source $HOME/.dotfiles/node/env.zsh
 pnpm install -g zx
 
-cd zxs
+cd $HOME/.dotfiles/env/zxs
 pnpm i
 
 # TODO load or prepare zxs linking

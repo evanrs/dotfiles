@@ -33,3 +33,5 @@ vscode/user/workspaceStorage
 **/elpa/*
 
 desktop
+
+.DS_STORE
