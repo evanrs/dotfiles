@@ -46,8 +46,8 @@ do
   fi
 done
 
-brew install 'mas' > dev/null
-if [ `mas list` == "" ]; then
+brew install 'mas' >/dev/null
+if [[ "$(mas list)" == "No installed apps found" ]]; then
   echo "› brew bundle app store apps"
   brew bundle --file=./homebrew/app-store-apps.rb | true
 fi

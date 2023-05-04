@@ -2,6 +2,8 @@
 
 # --skip-setup defers to properties set in node/env.zsh
 curl https://get.volta.sh | bash -s -- --skip-setup
+
+# add volta to $PATH
 source $HOME/.dotfiles/node/env.zsh
 
 # set default node version
