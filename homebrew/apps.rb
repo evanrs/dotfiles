@@ -30,6 +30,7 @@ cask 'postman'
 
 # Development
 cask 'iterm2'
+cask 'warp'
 # cask 'hyper'
 cask 'sequel-pro'
 cask 'android-studio'

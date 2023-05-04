@@ -2,11 +2,15 @@ tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
 
+# This Taxonomy is Stoooopid
+brew 'jq'
+
 # Version control
 brew 'git'
 brew 'git-lfs'
 brew 'git-delta'
-brew 'hub' # github cli
+brew 'hub'
+brew 'gh'
 
 # Languages
 # brew 'drip'

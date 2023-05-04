@@ -41,15 +41,13 @@ dependencies=(
   geekbench
 )
 
-for dependency in ${dependencies[@]}
-do
+for dependency in ${dependencies[@]}; do
   if [[ ! " ${installed[*]} " =~ " ${dependency} " ]]; then
-      brew install -f $dependency
+    brew install -f $dependency
   fi
+  # TODO: uninstall unlisted casks, make this the source of truth?
 done
 
-brew install 'mas' >/dev/null
-if [[ "$(mas list)" == "No installed apps found" ]]; then
-  echo "› brew bundle app store apps"
-  brew bundle --file=$HOME/.dotfiles/homebrew/app-store-apps.rb | true
-fi
+brew install mas 2>/dev/null
+echo "› brew bundle app store apps"
+brew bundle --file=$HOME/.dotfiles/homebrew/app-store-apps.rb | true

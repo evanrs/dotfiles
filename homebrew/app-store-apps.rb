@@ -7,7 +7,3 @@ mas 'Moom', id: 419330170
 # mas 'Clear', id: 504544917
 # mas 'Timecop', id: 466285239
 # mas 'Kindle', id: 405399194
-
-
-
-
