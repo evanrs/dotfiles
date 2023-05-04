@@ -1,4 +1,7 @@
 #! /usr/bin/env zsh
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+# Enable ruby version switching
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+
+# enable auto-switching of Rubies specified by .ruby-version files
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
