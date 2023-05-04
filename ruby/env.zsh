@@ -1,7 +1,17 @@
 #! /usr/bin/env zsh
 
-# Enable ruby version switching
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+chruby_path=/opt/homebrew/opt/chruby
 
-# enable auto-switching of Rubies specified by .ruby-version files
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+if [ -d "$chruby_path" ]; then; else
+  chruby_path=/usr/local/opt/chruby;
+fi
+
+if [ -d "$chruby_path" ]; then;
+  # enable ruby version switching
+  source $chruby_path/share/chruby/chruby.sh
+
+  # enable auto-switching of Rubies specified by .ruby-version files
+  source $chruby_path/share/chruby/auto.sh
+else
+  echo chruby not installed;
+fi
