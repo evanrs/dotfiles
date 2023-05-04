@@ -21,8 +21,8 @@ brew 'libevent'
 
 # ASDF dependencies
 brew 'coreutils'
-brew 'automake'
 brew 'autoconf'
+brew 'automake'
 brew 'openssl'
 brew 'libyaml'
 # brew 'readline'

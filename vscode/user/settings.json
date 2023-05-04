@@ -309,6 +309,14 @@
     {
       "name": "xp",
       "value": "#4d66f9"
+    },
+    {
+      "name": "GraphQL",
+      "value": "#e10098"
+    },
+    {
+      "name": "create.ts",
+      "value": "#e10098"
     }
   ],
   "files.trimFinalNewlines": true,
@@ -413,7 +421,7 @@
   "workbench.preferredDarkColorTheme": "Noctis Minimus",
   "workbench.preferredLightColorTheme": "Noctis Lux",
   "workbench.preferredHighContrastColorTheme": "SynthWave '84",
-  "workbench.colorTheme": "Noctis Minimus",
+  "workbench.colorTheme": "Noctis Lux",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": 600,
   "terminal.integrated.fontWeightBold": 900,
@@ -525,7 +533,6 @@
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.enable": false,
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "editor.foldingImportsByDefault": true,
   "json.format.enable": false,
   "editor.guides.indentation": false,
   "explorer.fileNesting.enabled": true,
@@ -541,9 +548,6 @@
   "oneDarkPro.italic": true,
   "oneDarkPro.vivid": true,
   "oneDarkPro.bold": true,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
   "editor.accessibilitySupport": "off",
   "editor.inlineSuggest.enabled": true,
   "workbench.tree.indent": 22,
@@ -564,5 +568,21 @@
   },
   "editor.tabSize": 2,
   "explorer.excludeGitIgnore": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "liveshare.allowInvites": "all",
+  "liveshare.anonymousGuestApproval": "accept",
+  "editor.unfoldOnClickAfterEndOfLine": true,
+  "editor.multiCursorModifier": "alt",
+  "window.commandCenter": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "window.zoomLevel": -1.25,
   "editor.formatOnSave": true
 }

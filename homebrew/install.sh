@@ -14,28 +14,27 @@ dependencies=(
   spotify
   firefox
   google-chrome
-  "homebrew/cask-versions/google-chrome-canary"
-  safari-technology-preview
-  charles
+  # "homebrew/cask-versions/google-chrome-canary"
+  # safari-technology-preview
+  # charles
   ngrok
   postman
   iterm2
-  hyper
-  sequel-pro
+  # hyper
+  # sequel-pro
   android-studio
-  insomnia
-  virtualbox
-  docker
+  # insomnia
+  # virtualbox
+  # docker
   google-cloud-sdk
   notion
-  # atom
   sublime-text
   visual-studio-code
   sketch
   figma
-  kaleidoscope # compare files
+  # kaleidoscope # compare files
   # gifrocket
-  vlc
+  # vlc
   slack
   geekbench
 )

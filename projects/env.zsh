@@ -26,6 +26,7 @@ function quit() {
   pkill -x zoom.us
   pkill -x Figma
   pkill -x Miro
+  pkill -x "Okta Verify"
 }
 
 # zstyle ':patternbuffer:*:*:pb-*:*' \

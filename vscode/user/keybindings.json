@@ -311,5 +311,9 @@
   {
     "key": "cmd+e cmd+r",
     "command": "fileutils.renameFile"
+  },
+  {
+    "key": "shift+alt+cmd+f",
+    "command": "prettier.forceFormatDocument"
   }
 ]

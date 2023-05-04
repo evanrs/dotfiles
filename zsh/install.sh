@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export ZSH=$HOME/.dotfiles
+
 if ! [ -e "${ZDOTDIR:-$HOME}/.zprezto" ]
 then
   echo "Cloning prezto into  ${ZDOTDIR:-$HOME}/.zprezto"

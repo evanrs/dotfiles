@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 # set default node version
-volta install node@14
+volta install node

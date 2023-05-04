@@ -5,7 +5,6 @@
 # cask 'lunar'
 cask 'alfred'
 
-
 # Audio
 ### REVIEW
 # cask 'blackhole'
@@ -22,7 +21,7 @@ cask 'firefox-developer-edition'
 
 cask 'google-chrome'
 cask 'google-chrome-canary'
-cask 'safari-technology-preview'
+# cask 'safari-technology-preview'
 
 # Network
 cask 'charles'
@@ -31,10 +30,10 @@ cask 'postman'
 
 # Development
 cask 'iterm2'
-cask 'hyper'
+# cask 'hyper'
 cask 'sequel-pro'
 cask 'android-studio'
-cask 'insomnia'
+# cask 'insomnia'
 
 # Virtualization
 cask 'virtualbox'
@@ -50,7 +49,7 @@ cask 'docker'
 cask 'google-cloud-sdk'
 
 # Editors
-cask 'atom'
+# cask 'atom'
 cask 'sublime-text'
 cask 'visual-studio-code'
 
@@ -58,12 +57,12 @@ cask 'visual-studio-code'
 cask 'sketch'
 
 # Utility
-cask 'kaleidoscope' # compare files
+# cask 'kaleidoscope' # compare files
 
 # Workflow
 
 # Media processing
-cask 'gifrocket'
+# cask 'gifrocket'
 
 # Consumption
 cask 'vlc'

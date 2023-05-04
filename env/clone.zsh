@@ -13,13 +13,35 @@
 
 function clone() {
   zparseopts -D -E -A opts \
-    -help: h:- \
-    -from: f:: \
-    -to: t::
+    -help: h:: \
+    -from: f:- \
+    -to: t:- \
+    -prefix: p:-
+
 
   help=$(expr $#opts[--help] + $#opts[-h])
+
+  if (($help)); then
+    I=$(echo $0 | sed "s/./ /g")
+    print -rC1 -- \
+      "$0 [-h|--help]" \
+      "$I show this command" \
+      "" \
+      "$I [-f|--from=<path>]" \
+      "$I [-t|--to=<path>]"
+      "$I [-p|--prefix=<path>]"
+    return
+  fi
+
+  # TODO: why did I add this?
+  if [[ $1 == "update" ]]; then;
+    echo "this would update the source repo … but that's not happening"
+    return;
+  fi
+
   from=${opts[--from]:-${opts[-f]}}
   to=${opts[--to]:-$opts[-t]}
+  prefix=${opts[--prefix]:-$opts[-p]}
   # TODO: convert to props with defaults including .ghostrc
     main=main
     pull=1
@@ -30,32 +52,17 @@ function clone() {
   from=${from:-${1:-}}
   to=${to:-${2:-${1:-}}}
 
-  if (($help)); then
-    I=$(echo $0 | sed "s/./ /g")
-    print -rC1 -- \
-      "$0 [-h|--help]" \
-      "$I show this command" \
-      "" \
-      "$I [-s|--from=<path>]" \
-      "$I [-o|--to=<path>]"
-    return
-  fi
-
-  if [[ $1 == "update" ]]; then;
-    echo "this would update the source repo … but that's not happening"
-    return;
-  fi
-
   eval dest=./$from:$(echo $to | sed -r "s/[^A-Za-z0-9-]/$delimiter/g")
   eval src="$(cat .ghostrc.json | jq -cr ".projects.$from" 2>/dev/null)"
-  eval prefix="$(cat .ghostrc.json | jq -cr ".branch.prefix" 2>/dev/null)"
+  eval prefix="${prefix:-$(cat .ghostrc.json | jq -cr ".branch.prefix" 2>/dev/null)}"
   branch="$prefix$to"
+
   if [ -z "$src" ]; then
     echo "Could not find project '$from' in local .ghostrc.json"
     return;
   fi
 
-
+  echo from: $from to: $to prefix: $prefix branch: $branch
 
   # Collect shared items
   attn Collect shared items
@@ -66,6 +73,7 @@ function clone() {
     git pull --rebase origin $main
     editorSettings=$(find . -path */.vscode -not -path */node_modules/*)
     localFiles=$(find . -path */*.local* -not -path */node_modules/*)
+    ghostFiles=$(find . -path */*.ghost* -not -path */node_modules/*)
     sampleFiles=$(find . -path */*.sample* -not -path */node_modules/*)
   cd -
 
@@ -111,12 +119,14 @@ function clone() {
     #   - share .local sratch files or scripts
     echo $editorSettings | xargs -n1 -I % ln -sFv $sourceDir/% %
     echo $localFiles | xargs -n1 -I % ln -sFv $sourceDir/% %
+    echo $ghostFiles | xargs -n1 -I % ln -sFv $sourceDir/% %
     echo $sampleFiles | xargs -n1 -I % cp -r $sourceDir/% %
     #   - share cache
     mkdir -p $sourceDir/.yarn/cache
     ln -sFv $src/.yarn/cache .yarn/cache
     #   - clone environment: .envrc …
     cp $src/.envrc .envrc
+
     direnv allow
     eval "$(direnv export zsh)"
 
@@ -131,11 +141,12 @@ function clone() {
 
     # Bootstrap project
     attn Bootstrap
-    for ((i=0,x=1; i<10 && x; i+=1)); do
-      # this would be handled in their bootstrap script
-      bootstrap;
-      x=$(( $? == 124 ))
-    done
+    zsh ./.ghost.sh >> /dev/null 2>&1
+
+    eval "$(direnv allow)"
+    eval "$(direnv export zsh)"
+    eval "$(direnv allow)"
+    eval "$(direnv export zsh)"
 }
 
 function attn () {
@@ -144,13 +155,6 @@ function attn () {
   echo "$@"
   sleep 1
   echo
-}
-
-function bootstrap() {
-  yarn install --immutable
-
-  # or .ghostrc for commands to run
-  yarn build:packages --skip-nx-cache
 }
 
 function portplz() {
