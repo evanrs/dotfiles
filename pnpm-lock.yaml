@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   is-promise:
     specifier: 4.0.0
@@ -273,8 +277,8 @@ packages:
       mime-db: 1.49.0
     dev: false
 
-  /minimist@1.2.5:
-    resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
+  /minimist@1.2.8:
+    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: false
 
   /node-fetch@2.6.2:
@@ -387,7 +391,7 @@ packages:
       chalk: 4.1.2
       fs-extra: 10.0.0
       globby: 12.0.2
-      minimist: 1.2.5
+      minimist: 1.2.8
       node-fetch: 2.6.2
       ps-tree: 1.2.0
       which: 2.0.2
