@@ -1,6 +1,10 @@
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
+tap 'oven-sh/bun'
+
+# Everything
+brew 'bun'
 
 # This Taxonomy is Stoooopid
 brew 'jq'
