@@ -35,7 +35,7 @@ function ip.() {
     return
   fi
 
-  devip=$(yarn dlx -q dev-ip)
+  devip=$(bun x dev-ip)
   value=$(echo $devip | sed "s/'/\"/g" | jq ".[0]" | sed "s/\"//g" | sed "s/^/${protocol:-"http:"}\/\//g")
 
   if (($#port)); then
