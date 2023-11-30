@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # TODO collect machine name
-machine_name="sokudo"
+machine_name="wave"
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change

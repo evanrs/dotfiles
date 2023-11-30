@@ -5,6 +5,7 @@
 function cdo() {
   for fullpath in "$@"
   do
+    mkdir -p $fullpath || echo $fullpath is not a directory
     if [ -d "$fullpath" ]; then;
       cd $fullpath
       if [[ -n *.code-workspace(#qN) ]] then;
@@ -22,6 +23,7 @@ function cdo() {
     fi
   done
 }
+
 
 function cdco() {
   folder="."

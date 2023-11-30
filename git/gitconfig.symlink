@@ -58,6 +58,8 @@
 	gpgsign = false
 [user]
 	signingkey = 7BF04185F483ECAC
+	email = me@evanrs.com
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

@@ -27,7 +27,7 @@ dependencies=(
   android-studio
   # insomnia
   # virtualbox
-  # docker
+  docker
   google-cloud-sdk
   notion
   sublime-text
@@ -39,6 +39,9 @@ dependencies=(
   # vlc
   slack
   geekbench
+
+  # … it's an app for some reason?
+  miniconda
 )
 
 for dependency in ${dependencies[@]}; do
