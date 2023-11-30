@@ -8,6 +8,18 @@ function pbd() {
 function gs.() {
   git status .
 }
+function gs..() {
+  git status ..
+}
+function gs...() {
+  git status ../..
+}
+function gs....() {
+  git status ../..
+}
+function gs/() {
+  git status
+}
 
 function gpa.() {
   git remote | xargs -L1 git push --all
